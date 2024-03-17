@@ -1,11 +1,15 @@
-/* Navbar */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Body */
 body {
     /* navbar position fixed miatt margin kell minden oldal tetejére */
     margin-top: 100px;
     background-color: #D8DEEC;
     background-image: url("../img/wave.webp");
+    font-family: 'Poppins', sans-serif;
 }
 
+/* Navbar */
 #navigacio {
     background-color: cornflowerblue;
     position: fixed;
@@ -15,7 +19,7 @@ body {
     z-index: 100;
     display: flex;
     align-items: center;
-    gap: 10%;
+    gap: 20%;
     border-radius: 40px;
 }
 
@@ -40,6 +44,7 @@ body {
     font-weight: bold;
     transition: background-color 0.3s ease;
     border-radius: 40px;
+    font-size: 14px;
 }
 
 #navigacio li a:hover, #navigacio li a.active {
