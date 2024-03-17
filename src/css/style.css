@@ -105,6 +105,12 @@ body {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+#login-form input[type="text"]:focus-visible,
+#login-form input[type="password"]:focus-visible {
+    outline-width: 2px;
+    outline-color: royalblue;
+}
+
 #login-form input[type="submit"] {
     width: 100%;
     padding: 10px;
