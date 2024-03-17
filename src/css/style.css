@@ -6,6 +6,8 @@ body {
     margin-top: 100px;
     background-color: #D8DEEC;
     background-image: url("../img/wave.webp");
+    background-repeat: no-repeat;
+    background-position-y: -50px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -19,7 +21,7 @@ body {
     z-index: 100;
     display: flex;
     align-items: center;
-    gap: 20%;
+    gap: calc((100% - 76px - 6px - 735px) / 2);
     border-radius: 40px;
 }
 
@@ -28,6 +30,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    width: 735px;
 }
 
 #navigacio li {
@@ -56,29 +59,79 @@ body {
     margin-left: 6px;
 }
 
+/* Login oldal */
+.login.content {
+    display: grid;
+    height: 670px;
+}
+
 /* Login form */
+.login-container {
+    background: #fff;
+    max-width: 400px;
+    margin: auto;
+    height: 500px;
+    display: flex;
+    border-radius: 40px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 0 40px;
+}
+
+.login-container h2 {
+    text-align: center;
+    align-self: center;
+}
+
 #login-form {
     max-width: 300px;
     margin: 0 auto;
+    display: grid;
+    grid-template-rows: 30% 20% 20% 12% 10%;
 }
+
+#login-form label {
+    padding-left: 20px;
+    font-weight: 500;
+}
+
 #login-form input[type="text"],
-#login-form input[type="email"],
 #login-form input[type="password"] {
     width: 100%;
-    padding: 10px;
-    margin: 5px 0;
+    padding: 20px;
+    margin: 6px 0 10px 0;
     box-sizing: border-box;
+    border: none;
+    border-radius: 40px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
 #login-form input[type="submit"] {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
     box-sizing: border-box;
-    background-color: #4CAF50;
+    background-color: cornflowerblue;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 40px;
+    font-weight: 600;
 }
+
 #login-form input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: royalblue;
+}
+
+#login-form .input-mezo.extra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 25px;
+    max-width: 260px;
+    margin: 0 20px;
+}
+
+#login-form .input-mezo.extra a {
+    text-decoration: none;
+    color: #36454F;
 }
