@@ -1,11 +1,22 @@
 /* Navbar */
+body {
+    /* navbar position fixed miatt margin kell minden oldal tetejére */
+    margin-top: 100px;
+    background-color: #D8DEEC;
+    background-image: url("../img/wave.webp");
+}
+
 #navigacio {
     background-color: cornflowerblue;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 4px;
+    left: 1%;
+    width: 98%;
     z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    border-radius: 40px;
 }
 
 #navigacio ul {
@@ -17,6 +28,7 @@
 
 #navigacio li {
     float: left;
+    margin: 0 4px;
 }
 
 #navigacio li a {
@@ -27,8 +39,41 @@
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    border-radius: 40px;
 }
 
-#navigacio li a:hover {
+#navigacio li a:hover, #navigacio li a.active {
     background-color: royalblue;
+}
+
+#navigacio #logo {
+    max-width: 70px;
+    margin-left: 6px;
+}
+
+/* Login form */
+#login-form {
+    max-width: 300px;
+    margin: 0 auto;
+}
+#login-form input[type="text"],
+#login-form input[type="email"],
+#login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+#login-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#login-form input[type="submit"]:hover {
+    background-color: #45a049;
 }
