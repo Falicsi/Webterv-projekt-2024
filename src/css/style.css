@@ -1,14 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+    --header-margin: 100px;
+    --footer-height: 60px;
+    --nav-menu-width: 735px;
+}
+
 /* Body */
+html {
+    min-height: 100vh;
+}
+
 body {
     /* navbar position fixed miatt margin kell minden oldal tetejére */
-    margin-top: 100px;
+    margin: var(--header-margin) 0 0 0;
     background-color: #D8DEEC;
     background-image: url("../img/wave.webp");
     background-repeat: no-repeat;
     background-position-y: -50px;
     font-family: 'Poppins', sans-serif;
+    min-height: calc(100vh - var(--header-margin)) !important;
+}
+
+.content {
+    min-height: calc(100vh - var(--header-margin) - var(--footer-height));
 }
 
 /* Navbar */
@@ -21,7 +36,7 @@ body {
     z-index: 100;
     display: flex;
     align-items: center;
-    gap: calc((100% - 76px - 6px - 735px) / 2);
+    gap: calc((100% - 76px - 6px - var(--nav-menu-width)) / 2);
     border-radius: 40px;
 }
 
@@ -30,7 +45,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    width: 735px;
+    width: var(--nav-menu-width);
 }
 
 #navigacio li {
@@ -230,4 +245,23 @@ body {
 #register-form .input-mezo.extra a {
     text-decoration: none;
     color: #36454F;
+}
+
+/* footer */
+footer {
+    background: cornflowerblue;
+    color: #fff;
+    width: 100%;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    max-height: 60px;
+}
+
+footer p {
+    margin: 0;
+    padding: 20px 0;
 }
