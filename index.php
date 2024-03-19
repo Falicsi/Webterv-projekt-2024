@@ -11,6 +11,9 @@
 </head>
 <body>
     <?php include 'pages/elements/navbar.php'; ?>
+    <div class="content">
 
+    </div>
+    <?php include 'pages/elements/footer.php'; ?>
 </body>
 </html>

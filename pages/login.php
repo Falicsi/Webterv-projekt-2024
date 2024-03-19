@@ -24,9 +24,9 @@
                 </div>
                 <div class="input-mezo extra">
                     <a class="forgot-password" href="#">Elfelejtett jelszó</a>
-                    <a class="register" href="#">Regisztráció</a>
+                    <a class="register" href="register.php">Regisztráció</a>
                 </div>
-                <input type="submit" value="Bejelentkezés">
+                <input type="submit" value="Bejelentkezés" class="submit-button">
             </form>
         </div>
     </div>

@@ -3,7 +3,7 @@
 :root {
     --header-margin: 100px;
     --footer-height: 60px;
-    --nav-menu-width: 735px;
+    --nav-text-menu-width: 750px;
 }
 
 /* Body */
@@ -36,16 +36,19 @@ body {
     z-index: 100;
     display: flex;
     align-items: center;
-    gap: calc((100% - 76px - 6px - var(--nav-menu-width)) / 2);
+    gap: calc((100% - 76px - var(--nav-text-menu-width)) / 2);
     border-radius: 40px;
 }
 
-#navigacio ul {
+#navigacio .pages {
+    display: flex;
+    align-items: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    width: var(--nav-menu-width);
+    max-width: var(--nav-text-menu-width);
+    gap: 30px;
 }
 
 #navigacio li {
@@ -65,13 +68,30 @@ body {
     font-size: 14px;
 }
 
-#navigacio li a:hover, #navigacio li a.active {
+#navigacio .text-menu li a:hover, #navigacio .text-menu li a.active {
     background-color: royalblue;
 }
 
 #navigacio #logo {
     max-width: 70px;
     margin-left: 6px;
+}
+
+#navigacio .icon-menu .nav-icon {
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
+    transition: 0.2s ease;
+    margin-top: 5px;
+}
+
+#navigacio .icon-menu .nav-icon:hover, #navigacio .icon-menu .active .nav-icon  {
+    opacity: 1;
+}
+
+#navigacio #icon1 a, #navigacio #icon2 a {
+    height: 100%;
+    padding: 0;
 }
 
 /* Login oldal */
@@ -126,10 +146,10 @@ body {
     outline-color: royalblue;
 }
 
-#login-form input[type="submit"] {
-    width: 100%;
+.submit-button {
+    width: 200px;
     padding: 10px;
-    margin-top: 10px;
+    margin: 0 auto;
     box-sizing: border-box;
     background-color: cornflowerblue;
     color: white;
@@ -137,6 +157,8 @@ body {
     cursor: pointer;
     border-radius: 40px;
     font-weight: 600;
+    transition: 0.2s ease;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #login-form input[type="submit"]:hover {
@@ -155,6 +177,11 @@ body {
 #login-form .input-mezo.extra a {
     text-decoration: none;
     color: #36454F;
+    transition: 0.2s ease;
+}
+
+#login-form .input-mezo.extra a:hover {
+    color: royalblue;
 }
 
 /* Regisztrációs oldal */
@@ -209,23 +236,15 @@ body {
 }
 
 #register-form input[type="text"]:focus-visible,
-#register-form input[type="password"]:focus-visible {
+#register-form input[type="password"]:focus-visible,
+#register-form input[type="email"]:focus-visible{
     outline-width: 2px;
     outline-color: royalblue;
 }
 
-#register-form input[type="submit"] {
-    width: 40%;
-    padding: 10px;
-    margin: auto;
-    box-sizing: border-box;
-    background-color: cornflowerblue;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 40px;
-    font-weight: 600;
+#register-form .submit-button {
     grid-column: span 2;
+    transition: 0.2s ease;
 }
 
 #register-form input[type="submit"]:hover {
