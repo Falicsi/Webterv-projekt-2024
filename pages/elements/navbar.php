@@ -1,4 +1,4 @@
-<nav id="navigacio">
+<nav id="navigacio" class="card">
     <img src="/src/img/logo.png" alt="logo" id="logo">
     <ul class="pages">
         <div class="text-menu">

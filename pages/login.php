@@ -11,20 +11,20 @@
 <body>
     <?php include 'elements/navbar.php'; ?>
     <div class="login content">
-        <div class="login-container">
+        <div class="login-container card">
             <form action="../src/actions/Login.php" method="POST" id="login-form">
                 <h2>Bejelentkezés</h2>
                 <div class="input-mezo">
                     <label for="username">Felhasználónév</label>
-                    <input type="text" placeholder="John Doe" id="username" name="username" required>
+                    <input type="text" placeholder="John Doe" id="username" name="username" class="card" required>
                 </div>
                 <div class="input-mezo">
                     <label for="password">Jelszó</label>
-                    <input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" id="password1" name="password" required>
+                    <input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" id="password1" name="password" class="card" required>
                 </div>
                 <div class="input-mezo extra">
-                    <a class="forgot-password" href="#">Elfelejtett jelszó</a>
-                    <a class="register" href="register.php">Regisztráció</a>
+                    <a class="forgot-password link" href="#">Elfelejtett jelszó</a>
+                    <a class="register link" href="register.php">Regisztráció</a>
                 </div>
                 <input type="submit" value="Bejelentkezés" class="submit-button">
             </form>

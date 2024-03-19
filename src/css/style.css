@@ -6,6 +6,25 @@
     --nav-text-menu-width: 750px;
 }
 
+/* Univerzális */
+.card {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.content {
+    min-height: calc(100vh - var(--header-margin) - var(--footer-height));
+}
+
+.link {
+    text-decoration: none;
+    color: #36454F;
+    transition: 0.35s ease;
+}
+
+.link:hover {
+    color: royalblue;
+}
+
 /* Body */
 html {
     min-height: 100vh;
@@ -20,10 +39,6 @@ body {
     background-position-y: -50px;
     font-family: 'Poppins', sans-serif;
     min-height: calc(100vh - var(--header-margin)) !important;
-}
-
-.content {
-    min-height: calc(100vh - var(--header-margin) - var(--footer-height));
 }
 
 /* Navbar */
@@ -108,7 +123,6 @@ body {
     height: 500px;
     display: flex;
     border-radius: 40px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 0 40px;
 }
 
@@ -137,7 +151,6 @@ body {
     box-sizing: border-box;
     border: none;
     border-radius: 40px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 #login-form input[type="text"]:focus-visible,
@@ -174,16 +187,6 @@ body {
     margin: 0 20px;
 }
 
-#login-form .input-mezo.extra a {
-    text-decoration: none;
-    color: #36454F;
-    transition: 0.2s ease;
-}
-
-#login-form .input-mezo.extra a:hover {
-    color: royalblue;
-}
-
 /* Regisztrációs oldal */
 .register.content {
     display: grid;
@@ -198,7 +201,6 @@ body {
     height: 400px;
     display: flex;
     border-radius: 40px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 0 40px;
 }
 
@@ -232,7 +234,6 @@ body {
     box-sizing: border-box;
     border: none;
     border-radius: 40px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 #register-form input[type="text"]:focus-visible,
@@ -264,6 +265,45 @@ body {
 #register-form .input-mezo.extra a {
     text-decoration: none;
     color: #36454F;
+}
+
+/* Profil oldal */
+.profile.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile-container img {
+    width: 96px;
+    height: 96px;
+    border: 3px solid royalblue;
+    border-radius: 96px;
+}
+
+.profile-container {
+    background: #fff;
+    max-width: 600px;
+    height: 400px;
+    margin: auto 5% auto auto;
+    border-radius: 40px;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-container .name {
+    margin-bottom: 0;
+}
+
+.profile-orders-container {
+    background: #fff;
+    max-width: 600px;
+    height: 400px;
+    margin: auto auto auto 5%;
+    border-radius: 40px;
+    padding: 0 80px;
 }
 
 /* footer */

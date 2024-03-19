@@ -10,6 +10,20 @@
 </head>
 <body>
     <?php include 'elements/navbar.php'; ?>
-
+    <div class="profile content">
+        <div class="profile-container card">
+            <h2>Profil adatok</h2>
+            <img src="/src/img/profilepic.png" alt="profilkep">
+            <p class="name">John Doe</p>
+            <p class="email">johndoe@gmail.com</p>
+            <div class="functions">
+                <a href="#" class="link">Szerkesztés</a>
+            </div>
+        </div>
+        <div class="profile-orders-container card">
+                <h2>Korábbi rendelések</h2>
+        </div>
+    </div>
+    <?php include 'elements/footer.php'; ?>
 </body>
 </html>
