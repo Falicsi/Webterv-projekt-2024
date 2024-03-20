@@ -22,7 +22,7 @@
         </div>
         <div class="profile-orders-container card">
                 <h2>Korábbi rendelések</h2>
-                <table class="megrendelesek-table card">
+                <table class="megrendelesek-table">
                     <thead>
                     <tr>
                         <th>Dátum</th>
