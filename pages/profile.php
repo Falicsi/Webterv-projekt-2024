@@ -22,6 +22,99 @@
         </div>
         <div class="profile-orders-container card">
                 <h2>Korábbi rendelések</h2>
+                <table class="megrendelesek-table card">
+                    <thead>
+                    <tr>
+                        <th>Dátum</th>
+                        <th>Ár</th>
+                        <th>Azonosító</th>
+                        <th>Tételek</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>2024-03-17</td>
+                        <td>4500 Ft</td>
+                        <td>#123456</td>
+                        <td class="tetelek">
+                            <ul>
+                                <li>Termék 1</li>
+                                <li>Termék 2</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2024-03-12</td>
+                        <td>5500 Ft</td>
+                        <td>#123456</td>
+                        <td class="tetelek">
+                            <ul>
+                                <li>Termék 1</li>
+                                <li>Termék 2</li>
+                                <li>Termék 3</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2024-03-22</td>
+                        <td>1200 Ft</td>
+                        <td>#123456</td>
+                        <td class="tetelek">
+                            <ul>
+                                <li>Termék 1</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2024-03-12</td>
+                        <td>5500 Ft</td>
+                        <td>#123456</td>
+                        <td class="tetelek">
+                            <ul>
+                                <li>Termék 1</li>
+                                <li>Termék 2</li>
+                                <li>Termék 3</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2024-03-12</td>
+                        <td>5500 Ft</td>
+                        <td>#123456</td>
+                        <td class="tetelek">
+                            <ul>
+                                <li>Termék 1</li>
+                                <li>Termék 2</li>
+                                <li>Termék 3</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2024-03-12</td>
+                        <td>5500 Ft</td>
+                        <td>#123456</td>
+                        <td class="tetelek">
+                            <ul>
+                                <li>Termék 1</li>
+                                <li>Termék 2</li>
+                                <li>Termék 3</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2024-03-12</td>
+                        <td>5500 Ft</td>
+                        <td>#123456</td>
+                        <td class="tetelek">
+                            <ul>
+                                <li>Termék 1</li>
+                                <li>Termék 2</li>
+                                <li>Termék 3</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
         </div>
     </div>
     <?php include 'elements/footer.php'; ?>
