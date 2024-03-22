@@ -105,13 +105,15 @@
                 <p class="name">Termék 12</p>
                 <p class="price">10500 Ft</p>
                 <div class="tocart">
-                        <button>Kosárba</button>
+                    <button>Kosárba</button>
                 </div>
             </div>
         </div>
         </div>
         
-    </div>        
+    </div> 
+    
+    <?php include 'elements/footer.php'; ?>
 
 </body>
 </html>
