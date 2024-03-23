@@ -14,6 +14,20 @@
     <?php include 'pages/elements/navbar.php'; ?>
     <div class="content">
 
+        <div class="homepage">
+            <h1>Üdvözöljük webshopunkban!</h1>
+            <p>Fedezze fel széles választékunkat stílusos és elegáns óráinkból.</p>
+            <a href="products.php" class="btn">Vásárlás</a>
+        </div>
+
+        <div class="image-container">
+            <div class="box">
+                <img src="./src/img/homepage/homepage01.jpg" alt="A man wearing a watch">
+            </div>
+            <div class="box">
+                <img src="./src/img/homepage/homepage02.jpg" alt="A man wearing a watch">
+            </div>
+        </div>
     </div>
     <?php include 'pages/elements/footer.php'; ?>
 </body>
