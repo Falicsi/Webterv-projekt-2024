@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Webshop - Profil</title>
     <link rel="stylesheet" type="text/css" href="../src/css/style.css">
+    <link rel="icon" type="image/png" href="../src/img/logo.png">
 </head>
 <body>
     <?php include 'elements/navbar.php'; ?>
