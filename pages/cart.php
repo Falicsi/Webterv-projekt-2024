@@ -33,11 +33,14 @@
                 </tr>
             </tfoot>
         </table>
-        </div>
-        
         <div class="navbuttons">
             <a href="products.php" class="button">Vissza a termékekhez</a>
             <a href="#" class="button">Megrendelés</a>
         </div>
+        </div>
+        
+        
+    </div>
+    <?php include 'elements/footer.php'; ?>
 </body>
 </html>
