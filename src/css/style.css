@@ -552,3 +552,48 @@ footer p {
   margin: 0 10px;
   text-decoration: none;
 }
+
+/* admin felület */
+
+.admin-interface {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+.user-management,
+.product-management {
+  background: #fff;
+  max-width: 600px;
+  min-width: 450px;
+  margin: 20px;
+  border-radius: 40px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.admin-interface button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: royalblue;
+  color: white;
+  border-radius: 30px;
+  margin: 20px 10px;
+}
+
+.admin-interface button:hover {
+  background-color: cornflowerblue;
+  transition: background-color 0.3s ease;
+}
+
+.admin-interface form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
