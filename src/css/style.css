@@ -423,13 +423,13 @@ footer p {
 .tocart button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: royalblue;
+  background-color: cornflowerblue;
   color: white;
   border-radius: 10px;
 }
 
 .tocart button:hover {
-  background-color: cornflowerblue;
+  background-color: royalblue;
   transition: background-color 0.3s ease;
 }
 
@@ -453,14 +453,14 @@ footer p {
 .homepage a {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: royalblue;
+  background-color: cornflowerblue;
   color: white;
   border-radius: 30px;
   text-decoration: none;
 }
 
 .homepage a:hover {
-  background-color: cornflowerblue;
+  background-color: royalblue;
   transition: background-color 0.3s ease;
 }
 
@@ -548,11 +548,16 @@ footer p {
 .navbuttons a {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: royalblue;
+  background-color: cornflowerblue;
   color: white;
   border-radius: 30px;
   margin: 30px 10px;
   text-decoration: none;
+}
+
+.navbuttons a:hover {
+  background-color: royalblue;
+  transition: background-color 0.3s ease;
 }
 
 /* admin felület */
@@ -580,17 +585,41 @@ footer p {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.admin-interface label {
+  padding: 10px;
+  font-weight: 500;
+}
+
 .admin-interface button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: royalblue;
+  background-color: cornflowerblue;
   color: white;
   border-radius: 30px;
   margin: 20px 10px;
+  font-weight: 600;
+}
+
+.admin-interface input[type="text"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+  padding: 20px;
+  margin: 6px 0 10px 0;
+  box-sizing: border-box;
+  border: solid 1px #36454f;
+  border-radius: 40px;
+}
+
+.admin-interface input[type="text"]:focus-visible,
+input[type="password"]:focus-visible,
+input[type="number"]:focus-visible {
+  outline-width: 2px;
+  outline-color: royalblue;
 }
 
 .admin-interface button:hover {
-  background-color: cornflowerblue;
+  background-color: royalblue;
   transition: background-color 0.3s ease;
 }
 
