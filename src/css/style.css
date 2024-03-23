@@ -475,3 +475,80 @@ footer p {
   aspect-ratio: 4/3;
   object-fit: contain;
 }
+
+/* Kosár oldal */
+
+.container .cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container .cart table {
+  background: #fff;
+  max-width: 600px;
+  margin: 20px;
+  border-radius: 40px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.container table thead {
+  background: rgba(100, 149, 237, 1);
+  border-radius: 16px;
+  color: #fff;
+  font-size: 25px;
+  padding: 10px 20px;
+  /* margin: 0px 20px; */
+}
+
+.container table thead {
+  background: rgba(100, 149, 237, 1);
+  border-radius: 16px;
+  color: #fff;
+  font-size: 25px;
+  padding: 10px 20px;
+  margin-bottom: 20px; /* Increase the margin-bottom value to enlarge the gap */
+}
+
+.container table th {
+  padding: 5px 10px;
+}
+
+.container table td {
+  background: rgba(100, 149, 237, 0.6);
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.container table tfoot td {
+  background: rgba(100, 149, 237, 1);
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 16px;
+}
+
+.navbuttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+.navbuttons a {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: royalblue;
+  color: white;
+  border-radius: 30px;
+  margin: 0 10px;
+  text-decoration: none;
+}

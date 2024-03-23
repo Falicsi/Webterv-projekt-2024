@@ -7,9 +7,37 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Webshop - Kosár</title>
     <link rel="stylesheet" type="text/css" href="../src/css/style.css">
+    <link rel="icon" type="image/png" href="../src/img/logo.png">
 </head>
 <body>
     <?php include 'elements/navbar.php'; ?>
-
+    <div class="container">
+        <div class="cart">
+            <h1>Kosár</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Termék</th>
+                    <th>Mennyiség</th>
+                    <th>Ár</th>
+                    <th>Összesen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <td>###</td>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Összesen:</td>
+                    <td> Ft</td>
+                </tr>
+            </tfoot>
+        </table>
+        </div>
+        
+        <div class="navbuttons">
+            <a href="products.php" class="button">Vissza a termékekhez</a>
+            <a href="#" class="button">Megrendelés</a>
+        </div>
 </body>
 </html>
