@@ -13,7 +13,7 @@
     <div class="products content">
         <div class="products-container">
             <div class="product-card">
-                <img src="/src/img/product.png" alt="termek">
+                <img src="../src/img/products/01.jpg" alt="termek">
                 <p class="name">Termék 1</p>
                 <p class="price">6500 Ft</p>
                 <div class="tocart">
@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="/src/img/product.png" alt="termek">
+                <img src="../src/img/products/02.jpg" alt="termek">
                 <p class="name">Termék 2</p>
                 <p class="price">7500 Ft</p>
                 <div class="tocart">
@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="/src/img/product.png" alt="termek">
+                <img src="../src/img/products/03.jpg" alt="termek">
                 <p class="name">Termék 3</p>
                 <p class="price">8500 Ft</p>
                 <div class="tocart">
@@ -37,7 +37,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="/src/img/product.png" alt="termek">
+                <img src="../src/img/products/04.jpg" alt="termek">
                 <p class="name">Termék 4</p>
                 <p class="price">9500 Ft</p>
                 <div class="tocart">
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="/src/img/product.png" alt="termek">
+                <img src="../src/img/products/05.jpg" alt="termek">
                 <p class="name">Termék 5</p>
                 <p class="price">10500 Ft</p>
                 <div class="tocart">
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="/src/img/product.png" alt="termek">
+                <img src="../src/img/products/06.jpg" alt="termek">
                 <p class="name">Termék 6</p>
                 <p class="price">6500 Ft</p>
                 <div class="tocart">
@@ -61,7 +61,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="/src/img/product.png" alt="termek">
+                <img src="../src/img/products/07.jpg" alt="termek">
                 <p class="name">Termék 7</p>
                 <p class="price">7500 Ft</p>
                 <div class="tocart">
@@ -69,7 +69,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="/src/img/product.png" alt="termek">
+                <img src="../src/img/products/08.jpg" alt="termek">
                 <p class="name">Termék 8</p>
                 <p class="price">8500 Ft</p>
                 <div class="tocart">
@@ -77,7 +77,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="/src/img/product.png" alt="termek">
+                <img src="../src/img/products/09.jpg" alt="termek">
                 <p class="name">Termék 9</p>
                 <p class="price">9500 Ft</p>
                 <div class="tocart">
@@ -85,7 +85,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="/src/img/product.png" alt="termek">
+                <img src="../src/img/products/10.jpg" alt="termek">
                 <p class="name">Termék 10</p>
                 <p class="price">10500 Ft</p>
                 <div class="tocart">
@@ -93,7 +93,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="/src/img/product.png" alt="termek">
+                <img src="../src/img/products/11.jpg" alt="termek">
                 <p class="name">Termék 11</p>
                 <p class="price">9500 Ft</p>
                 <div class="tocart">
@@ -101,7 +101,7 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="/src/img/product.png" alt="termek">
+                <img src="../src/img/products/12.jpg" alt="termek">
                 <p class="name">Termék 12</p>
                 <p class="price">10500 Ft</p>
                 <div class="tocart">
