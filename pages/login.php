@@ -27,7 +27,7 @@
                     <a class="forgot-password link" href="#">Elfelejtett jelszó</a>
                     <a class="register link" href="register.php">Regisztráció</a>
                 </div>
-                <input type="submit" value="Bejelentkezés" class="submit-button">
+                <input type="submit" value="Bejelentkezés" class="submit-button button-blue">
             </form>
         </div>
     </div>

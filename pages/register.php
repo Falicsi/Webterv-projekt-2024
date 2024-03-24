@@ -32,7 +32,7 @@
                     <label for="password2">Jelszó újra</label>
                     <input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" id="password2" name="password2" class="card" required>
                 </div>
-                <input type="submit" value="Regisztráció" class="submit-button">
+                <input type="submit" value="Regisztráció" class="submit-button button-blue">
             </form>
         </div>
     </div>

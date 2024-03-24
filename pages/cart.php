@@ -29,13 +29,13 @@
             <tfoot>
                 <tr>
                     <td colspan="3">Összesen:</td>
-                    <td> Ft</td>
+                    <td>USD</td>
                 </tr>
             </tfoot>
         </table>
         <div class="navbuttons">
-            <a href="products.php" class="button">Vissza a termékekhez</a>
-            <a href="#" class="button">Megrendelés</a>
+            <a href="products.php" class="button-blue">Vissza a termékekhez</a>
+            <a href="#" class="button-blue">Megrendelés</a>
         </div>
         </div>
         

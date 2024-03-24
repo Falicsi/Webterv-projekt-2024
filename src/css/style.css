@@ -6,6 +6,37 @@
   --nav-text-menu-width: 750px;
 }
 
+/* Reszponzivitas */
+@media only screen and (max-width: 1050px) {
+  :root {
+    --header-margin: 160px !important;
+  }
+
+  .products-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .product-card {
+    margin: auto !important;
+    min-width: 220px !important;
+  }
+
+  .admin-interface {
+    flex-direction: column !important;
+  }
+
+  .profile.content {
+    grid-template-columns: 1fr !important;
+    gap: 30px;
+  }
+
+  .profile-container, .profile-orders-container {
+    margin: auto !important;
+  }
+
+
+}
+
 /* Univerzális */
 .card {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -182,17 +213,6 @@ body {
 
 .submit-button {
   width: 200px;
-  padding: 10px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  background-color: cornflowerblue;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 40px;
-  font-weight: 600;
-  transition: 0.2s ease;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #login-form input[type="submit"]:hover {
@@ -304,6 +324,7 @@ body {
 .profile-container {
   background: #fff;
   max-width: 600px;
+  min-height: 450px;
   max-height: 80%;
   margin: auto 5% auto auto;
   border-radius: 40px;
@@ -364,6 +385,7 @@ body {
   color: #fff;
   font-weight: 600;
   font-size: 13px;
+  min-width: 100px;
 }
 
 .profile-orders-container td:not(.profile-orders-container tr:last-of-type td) {
@@ -416,7 +438,7 @@ footer p {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.product-card img {
+.product-card img:not(.tocart img) {
   width: 150px;
   height: 150px;
   border: 4px solid royalblue;
@@ -430,20 +452,27 @@ footer p {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
+  text-align: center;
+  height: 60px;
 }
 
 .product-card .price {
   font-size: 16px;
   color: royalblue;
   margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.tocart {
+  margin-top: auto;
 }
 
 .tocart button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: cornflowerblue;
-  color: white;
-  border-radius: 10px;
+  padding: 10px 12px 6px;
+}
+
+.tocart button img {
+  width: 25px;
 }
 
 .tocart button:hover {
@@ -490,6 +519,8 @@ footer p {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 90%;
+  margin: 2% auto;
 }
 
 .image-container img {
@@ -497,6 +528,18 @@ footer p {
   aspect-ratio: 4/3;
   object-fit: contain;
   border-radius: 200px;
+}
+
+.homepage:last-child {
+  margin: 20px auto 50px auto;
+}
+
+.top-products h2 {
+  text-align: center;
+}
+
+.top-products .products-container {
+  grid-template-rows: 1fr;
 }
 
 /* Kosár oldal */
@@ -526,17 +569,9 @@ footer p {
   background: rgba(100, 149, 237, 1);
   border-radius: 16px;
   color: #fff;
-  font-size: 25px;
+  font-size: 20px;
   padding: 10px 20px;
-}
-
-.container table thead {
-  background: rgba(100, 149, 237, 1);
-  border-radius: 16px;
-  color: #fff;
-  font-size: 25px;
-  padding: 10px 20px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .container table th {
@@ -554,7 +589,7 @@ footer p {
   background: rgba(100, 149, 237, 1);
   color: #fff;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   padding: 10px 20px;
   border-radius: 16px;
 }
@@ -570,16 +605,8 @@ footer p {
 .navbuttons a {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: cornflowerblue;
-  color: white;
-  border-radius: 30px;
   margin: 30px 10px;
   text-decoration: none;
-}
-
-.navbuttons a:hover {
-  background-color: royalblue;
-  transition: background-color 0.3s ease;
 }
 
 /* admin felület */
@@ -615,11 +642,7 @@ footer p {
 .admin-interface button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: cornflowerblue;
-  color: white;
-  border-radius: 30px;
   margin: 20px 10px;
-  font-weight: 600;
 }
 
 .admin-interface input[type="text"],
@@ -629,7 +652,7 @@ input[type="number"] {
   padding: 20px;
   margin: 6px 0 10px 0;
   box-sizing: border-box;
-  border: solid 1px #36454f;
+  border: none;
   border-radius: 40px;
 }
 
@@ -651,3 +674,4 @@ input[type="number"]:focus-visible {
   justify-content: center;
   align-items: center;
 }
+

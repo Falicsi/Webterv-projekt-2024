@@ -35,82 +35,82 @@
                     <tbody>
                     <tr>
                         <td>2024-03-17</td>
-                        <td>4500 Ft</td>
+                        <td>4500 USD</td>
                         <td>#123456</td>
                         <td class="tetelek">
                             <ul>
-                                <li>Termék 1</li>
-                                <li>Termék 2</li>
+                                <li>Omega Speedmaster</li>
+                                <li>TAG Heuer Carrera</li>
                             </ul>
                         </td>
                     </tr>
                     <tr>
                         <td>2024-03-12</td>
-                        <td>5500 Ft</td>
+                        <td>5500 USD</td>
                         <td>#123456</td>
                         <td class="tetelek">
                             <ul>
-                                <li>Termék 1</li>
-                                <li>Termék 2</li>
-                                <li>Termék 3</li>
+                                <li>Audemars Piguet Royal Oak</li>
+                                <li>Jaeger-LeCoultre Reverso</li>
+                                <li>Patek Philippe Nautilus</li>
                             </ul>
                         </td>
                     </tr>
                     <tr>
                         <td>2024-03-22</td>
-                        <td>1200 Ft</td>
+                        <td>1200 USD</td>
                         <td>#123456</td>
                         <td class="tetelek">
                             <ul>
-                                <li>Termék 1</li>
+                                <li>Hublot Big Bang</li>
                             </ul>
                         </td>
                     </tr>
                     <tr>
                         <td>2024-03-12</td>
-                        <td>5500 Ft</td>
+                        <td>5500 USD</td>
                         <td>#123456</td>
                         <td class="tetelek">
                             <ul>
-                                <li>Termék 1</li>
-                                <li>Termék 2</li>
-                                <li>Termék 3</li>
+                                <li>Audemars Piguet Royal Oak</li>
+                                <li>Jaeger-LeCoultre Reverso</li>
+                                <li>Patek Philippe Nautilus</li>
                             </ul>
                         </td>
                     </tr>
                     <tr>
                         <td>2024-03-12</td>
-                        <td>5500 Ft</td>
+                        <td>9800 USD</td>
                         <td>#123456</td>
                         <td class="tetelek">
                             <ul>
-                                <li>Termék 1</li>
-                                <li>Termék 2</li>
-                                <li>Termék 3</li>
+                                <li>Audemars Piguet Royal Oak</li>
+                                <li>Jaeger-LeCoultre Reverso</li>
+                                <li>Patek Philippe Nautilus</li>
                             </ul>
                         </td>
                     </tr>
                     <tr>
                         <td>2024-03-12</td>
-                        <td>5500 Ft</td>
+                        <td>15500 USD</td>
                         <td>#123456</td>
                         <td class="tetelek">
                             <ul>
-                                <li>Termék 1</li>
-                                <li>Termék 2</li>
-                                <li>Termék 3</li>
+                                <li>Audemars Piguet Royal Oak</li>
+                                <li>Jaeger-LeCoultre Reverso</li>
+                                <li>Vacheron Constantin Patrimony</li>
                             </ul>
                         </td>
                     </tr>
                     <tr>
                         <td>2024-03-12</td>
-                        <td>5500 Ft</td>
+                        <td>2100 USD</td>
                         <td>#123456</td>
                         <td class="tetelek">
                             <ul>
-                                <li>Termék 1</li>
-                                <li>Termék 2</li>
-                                <li>Termék 3</li>
+                                <li>Vacheron Constantin Patrimony</li>
+                                <li>Audemars Piguet Royal Oak</li>
+                                <li>TAG Heuer Carrera</li>
                             </ul>
                         </td>
                     </tr>

@@ -2,7 +2,7 @@
     <img src="/src/img/logo.png" alt="logo" id="logo">
     <ul class="pages">
         <div class="text-menu">
-            <li><a <?php if ($_SERVER['PHP_SELF'] == "/index.php") echo 'class="active"' ?> href="/index.php">Kezdőlap</a></li>
+            <li><a <?php if ($_SERVER['PHP_SELF'] == "/index.html") echo 'class="active"' ?> href="/index.html">Kezdőlap</a></li>
             <li><a <?php if ($_SERVER['PHP_SELF'] == "/pages/products.php") echo 'class="active"' ?> href="/pages/products.php">Termékek</a></li>
             <li><a <?php if ($_SERVER['PHP_SELF'] == "/pages/admin.php") echo 'class="active"' ?> href="/pages/admin.php">Admin</a></li>
             <li><a <?php if ($_SERVER['PHP_SELF'] == "/pages/login.php") echo 'class="active"' ?> href="/pages/login.php">Bejelentkezés</a></li>
