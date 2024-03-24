@@ -14,32 +14,43 @@
     <div class="container">
         <div class="cart">
             <h1>Kosár</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Termék</th>
-                    <th>Mennyiség</th>
-                    <th>Ár</th>
-                    <th>Összesen</th>
-                </tr>
-            </thead>
-            <tbody>
-                <td>###</td>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="3">Összesen:</td>
-                    <td>USD</td>
-                </tr>
-            </tfoot>
-        </table>
-        <div class="navbuttons">
-            <a href="products.php" class="button-blue">Vissza a termékekhez</a>
-            <a href="#" class="button-blue">Megrendelés</a>
+            <div class="table-div">
+                <table class="order">
+                    <thead>
+                    <tr>
+                        <th>Termék</th>
+                        <th>Mennyiség</th>
+                        <th>Ár</th>
+                        <th>Összesen</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Rolex Submariner</td>
+                        <td>1</td>
+                        <td>9500</td>
+                        <td>9500 USD</td>
+                    </tr>
+                    <tr>
+                        <td>Omega Speedmaster</td>
+                        <td>1</td>
+                        <td>9500</td>
+                        <td>8500 USD</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="sum">
+                    <tr>
+                        <td>Összesen:</td>
+                        <td>19000 USD</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="navbuttons">
+                <a href="products.php" class="button-blue">Vissza a termékekhez</a>
+                <a href="#" class="button-blue">Megrendelés</a>
+            </div>
         </div>
-        </div>
-        
-        
     </div>
     <?php include 'elements/footer.php'; ?>
 </body>

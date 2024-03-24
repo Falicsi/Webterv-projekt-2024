@@ -422,6 +422,8 @@ footer p {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 20px;
+  max-width: 90%;
+  margin: auto;
 }
 
 /* Product cards */
@@ -515,6 +517,19 @@ footer p {
   transition: background-color 0.3s ease;
 }
 
+.home-login {
+  margin: 70px 0;
+}
+
+.home-login .login-container {
+  max-width: 300px;
+  height: 480px;
+}
+
+.home-login h3 {
+  text-align: center;
+}
+
 .image-container {
   display: flex;
   justify-content: center;
@@ -552,46 +567,81 @@ footer p {
   height: calc(100vh - 160px);
 }
 
-.container .cart table {
+.container .table-div {
   background: #fff;
-  max-width: 600px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  max-width: 800px;
   margin: 20px 20px 0 20px;
   border-radius: 40px;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.container table thead {
+.container .cart .order {
+  border-spacing: 0;
+}
+
+.container .order thead {
   background: rgba(100, 149, 237, 1);
   border-radius: 16px;
   color: #fff;
   font-size: 20px;
-  padding: 10px 20px;
-  margin-bottom: 18px;
 }
 
-.container table th {
+.container .order th {
   padding: 5px 10px;
+  min-width: 150px;
 }
 
-.container table td {
+.container .order tbody, .container .order tr {
+  width: 100%;
+}
+
+.container .order tbody td {
+  width: 25%;
+  text-align: center;
+  padding: 10px;
+}
+
+.container .order td {
   background: rgba(100, 149, 237, 0.6);
   color: #fff;
   font-weight: 600;
   font-size: 13px;
 }
 
-.container table tfoot td {
+.container .sum {
+  margin: 20px auto 5px auto;
+  color: rgba(100, 149, 237, 1);
+  font-weight: 500;
+}
+
+.container .order tfoot td {
   background: rgba(100, 149, 237, 1);
   color: #fff;
   font-weight: 600;
   font-size: 16px;
   padding: 10px 20px;
   border-radius: 16px;
+}
+
+.container .order thead th:first-of-type {
+  border-top-left-radius: 20px;
+}
+
+.container .order thead th:last-of-type {
+  border-top-right-radius: 20px;
+}
+
+.container .order tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 20px;
+}
+
+.container .order tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 20px;
+}
+
+.container .order td:not(.profile-orders-container tr:last-of-type td) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 .navbuttons {

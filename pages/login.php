@@ -21,7 +21,7 @@
                 </div>
                 <div class="input-mezo">
                     <label for="password">Jelszó</label>
-                    <input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" id="password1" name="password" class="card" required>
+                    <input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" id="password" name="password" class="card" required>
                 </div>
                 <div class="input-mezo extra">
                     <a class="forgot-password link" href="#">Elfelejtett jelszó</a>
