@@ -12,99 +12,95 @@
 <body>
     <?php include 'elements/navbar.php'; ?>
     <div class="products content">
+        <div class="products-header">
+            <h2>Óra választékunk</h2>
+        </div>
         <div class="products-container">
             <div class="product-card">
                 <img src="../src/img/products/01.jpg" alt="termek">
-                <p class="name">Termék 1</p>
-                <p class="price">6500 Ft</p>
+                <p class="name">Rolex Submariner</p>
+                <p class="price">9500</p>
                 <div class="tocart">
                     <button>Kosárba</button>
                 </div>
             </div>
+
             <div class="product-card">
                 <img src="../src/img/products/02.jpg" alt="termek">
-                <p class="name">Termék 2</p>
-                <p class="price">7500 Ft</p>
+                <p class="name">Omega Speedmaster</p>
+                <p class="price">8500</p>
                 <div class="tocart">
                     <button>Kosárba</button>
                 </div>
             </div>
+
             <div class="product-card">
                 <img src="../src/img/products/03.jpg" alt="termek">
-                <p class="name">Termék 3</p>
-                <p class="price">8500 Ft</p>
+                <p class="name">TAG Heuer Carrera</p>
+                <p class="price">7500</p>
                 <div class="tocart">
                     <button>Kosárba</button>
                 </div>
             </div>
+
             <div class="product-card">
                 <img src="../src/img/products/04.jpg" alt="termek">
-                <p class="name">Termék 4</p>
-                <p class="price">9500 Ft</p>
+                <p class="name">Audemars Piguet Royal Oak</p>
+                <p class="price">11500</p>
                 <div class="tocart">
                     <button>Kosárba</button>
                 </div>
             </div>
+
             <div class="product-card">
                 <img src="../src/img/products/05.jpg" alt="termek">
-                <p class="name">Termék 5</p>
-                <p class="price">10500 Ft</p>
+                <p class="name">Patek Philippe Nautilus</p>
+                <p class="price">10500</p>
                 <div class="tocart">
                     <button>Kosárba</button>
                 </div>
             </div>
+
             <div class="product-card">
                 <img src="../src/img/products/06.jpg" alt="termek">
-                <p class="name">Termék 6</p>
-                <p class="price">6500 Ft</p>
+                <p class="name">Hublot Big Bang</p>
+                <p class="price">12500</p>
                 <div class="tocart">
                     <button>Kosárba</button>
                 </div>
             </div>
+
             <div class="product-card">
                 <img src="../src/img/products/07.jpg" alt="termek">
-                <p class="name">Termék 7</p>
-                <p class="price">7500 Ft</p>
+                <p class="name">Jaeger-LeCoultre Reverso</p>
+                <p class="price">9500</p>
                 <div class="tocart">
                     <button>Kosárba</button>
                 </div>
             </div>
+
             <div class="product-card">
                 <img src="../src/img/products/08.jpg" alt="termek">
-                <p class="name">Termék 8</p>
-                <p class="price">8500 Ft</p>
+                <p class="name">Cartier Tank</p>
+                <p class="price">8500</p>
                 <div class="tocart">
                     <button>Kosárba</button>
                 </div>
             </div>
+
             <div class="product-card">
                 <img src="../src/img/products/09.jpg" alt="termek">
-                <p class="name">Termék 9</p>
-                <p class="price">9500 Ft</p>
+                <p class="name">Breguet Classique</p>
+                <p class="price">13500</p>
                 <div class="tocart">
                     <button>Kosárba</button>
                 </div>
             </div>
+
             <div class="product-card">
                 <img src="../src/img/products/10.jpg" alt="termek">
-                <p class="name">Termék 10</p>
-                <p class="price">10500 Ft</p>
-                <div class="tocart">
-                    <button>Kosárba</button>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="../src/img/products/11.jpg" alt="termek">
-                <p class="name">Termék 11</p>
-                <p class="price">9500 Ft</p>
-                <div class="tocart">
-                    <button>Kosárba</button>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="../src/img/products/12.jpg" alt="termek">
-                <p class="name">Termék 12</p>
-                <p class="price">10500 Ft</p>
+                <p class="name">Vacheron Constantin Patrimony</p>
+                <p class="price">14500</p>
                 <div class="tocart">
                     <button>Kosárba</button>
                 </div>

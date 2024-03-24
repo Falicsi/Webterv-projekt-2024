@@ -1,4 +1,3 @@
-<?php session_start() ?>
 <!doctype html>
 <html lang="hu">
 <head>
@@ -17,7 +16,7 @@
         <div class="homepage">
             <h1>Üdvözöljük webshopunkban!</h1>
             <p>Fedezze fel széles választékunkat stílusos és elegáns óráinkból.</p>
-            <a href="products.php" class="btn">Vásárlás</a>
+            <a href="pages/products.php" class="btn">Vásárlás</a>
         </div>
 
         <div class="image-container">

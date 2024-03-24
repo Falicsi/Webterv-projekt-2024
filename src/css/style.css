@@ -25,6 +25,24 @@
   color: royalblue;
 }
 
+.button-blue {
+  padding: 10px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: cornflowerblue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 40px;
+  font-weight: 600;
+  transition: 0.2s ease;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button-blue:hover {
+  background-color: royalblue;
+}
+
 /* Body */
 html {
   min-height: 100vh;
@@ -431,6 +449,10 @@ footer p {
 .tocart button:hover {
   background-color: royalblue;
   transition: background-color 0.3s ease;
+}
+
+.products-header h2 {
+  text-align: center;
 }
 
 /* Kezdőlap oldal */
