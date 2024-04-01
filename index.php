@@ -10,28 +10,8 @@
     <link rel="icon" type="image/png" href="./src/img/logo.png">
 </head>
 <body>
-    <nav id="navigacio" class="card">
-        <img src="/src/img/logo.png" alt="logo" id="logo">
-        <ul class="pages">
-            <div class="text-menu">
-                <li><a class="active" href="/index.html">Kezdőlap</a></li>
-                <li><a href="/pages/products.php">Termékek</a></li>
-                <li><a href="/pages/admin.php">Admin</a></li>
-                <li><a href="/pages/login.php">Bejelentkezés</a></li>
-                <li><a href="/pages/register.php">Regisztráció</a></li>
-            </div>
-            <div class="icon-menu">
-                <li id="icon2"><a href="/pages/profile.php">
-                    <img class="nav-icon" src="/src/img/user.png" alt="profil">
-                    </a></li>
-                <li id="icon1"><a href="/pages/cart.php">
-                    <img class="nav-icon" src="/src/img/cart.png" alt="kosar">
-                    </a></li>
-            </div>
-        </ul>
-    </nav>
+    <?php include_once "pages/elements/navbar.php" ?>
     <div class="content">
-
         <div class="homepage">
             <h1>Üdvözöljük webshopunkban!</h1>
         </div>

@@ -3,7 +3,7 @@
 :root {
   --header-margin: 100px;
   --footer-height: 60px;
-  --nav-text-menu-width: 750px;
+  --nav-text-menu-width: 800px;
 }
 
 /* Reszponzivitas */
@@ -115,7 +115,14 @@ body {
   gap: 30px;
 }
 
-#navigacio li {
+#navigacio .text-menu li {
+  float: left;
+  margin: 0 4px;
+  list-style: none;
+}
+
+#navigacio .icon-menu ul li {
+  list-style: none;
   float: left;
   margin: 0 4px;
 }
