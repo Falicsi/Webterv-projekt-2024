@@ -1,0 +1,12 @@
+{
+    "users": [
+        [
+            {
+                "id": "660b0371264b0",
+                "username": "admin",
+                "password": "$2y$10$jOKJ5imRb4WsmXoSDeZEpOTGfTNluCG3N1zFiYmXMKC8METgFGWri",
+                "email": "admin@admin.hu"
+            }
+        ]
+    ]
+}

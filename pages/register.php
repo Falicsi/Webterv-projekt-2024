@@ -1,4 +1,6 @@
-<?php session_start() ?>
+<?php
+    session_start();
+?>
 <!doctype html>
 <html lang="hu">
 <head>
@@ -32,9 +34,21 @@
                     <label for="password2">Jelszó újra</label>
                     <input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" id="password2" name="password2" class="card" required>
                 </div>
-                <input type="submit" value="Regisztráció" class="submit-button button-blue">
+                <input type="submit" value="Regisztráció" name="signup" class="submit-button button-blue">
             </form>
         </div>
+        <?php
+        if (isset($_SESSION['hibak'])) {
+            $hibak = $_SESSION['hibak'];
+            if (!empty($hibak)) {
+                echo '<ul style="color: red;">';
+                foreach ($hibak as $hiba) {
+                    echo "<li>$hiba</li>";
+                }
+                echo '</ul>';
+            }
+        }
+        ?>
     </div>
     <?php include 'elements/footer.php'; ?>
 </body>
