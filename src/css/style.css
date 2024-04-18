@@ -30,11 +30,10 @@
     gap: 30px;
   }
 
-  .profile-container, .profile-orders-container {
+  .profile-container,
+  .profile-orders-container {
     margin: auto !important;
   }
-
-
 }
 
 /* Univerzális */
@@ -447,6 +446,13 @@ footer p {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.product-card form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .product-card img:not(.tocart img) {
   width: 150px;
   height: 150px;
@@ -466,6 +472,7 @@ footer p {
 }
 
 .product-card .price {
+  text-align: center;
   font-size: 16px;
   color: royalblue;
   margin-bottom: 10px;
@@ -571,7 +578,7 @@ footer p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: calc(100vh - 160px);
+  min-height: calc(100vh - 160px);
 }
 
 .container .table-div {
@@ -599,7 +606,8 @@ footer p {
   min-width: 150px;
 }
 
-.container .order tbody, .container .order tr {
+.container .order tbody,
+.container .order tr {
   width: 100%;
 }
 
@@ -659,11 +667,17 @@ footer p {
   padding: 10px 20px;
 }
 
-.navbuttons a {
-  padding: 10px 20px;
+.navbuttons a,
+.navbuttons form button {
+  box-sizing: border-box;
+  padding: 20px 20px;
   font-size: 16px;
   margin: 30px 10px;
   text-decoration: none;
+  display: inline-block;
+  width: 150px;
+  text-align: center;
+  line-height: 1.5;
 }
 
 /* admin felület */
@@ -673,7 +687,7 @@ footer p {
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  height: calc(100vh - 160px);
+  min-height: calc(100vh - 160px);
 }
 
 .user-management,
@@ -731,4 +745,3 @@ input[type="number"]:focus-visible {
   justify-content: center;
   align-items: center;
 }
-
