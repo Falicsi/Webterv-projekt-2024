@@ -10,7 +10,9 @@
     <link rel="icon" type="image/png" href="./src/img/logo.png">
 </head>
 <body>
-    <?php include_once "pages/elements/navbar.php" ?>
+    <?php
+    session_start();
+     include_once "pages/elements/navbar.php" ?>
     <div class="content">
         <div class="homepage">
             <h1>Üdvözöljük webshopunkban!</h1>
@@ -29,47 +31,63 @@
             <h2>Tekintse meg kiemelt termékeinket</h2>
             <div class="products-container">
                 <div class="product-card">
+                    <form action="../src/actions/AddToCart.php" method="post">
                     <img src="../src/img/products/01.jpg" alt="termek">
                     <p class="name">Rolex Submariner</p>
                     <p class="price">9500 USD$</p>
                     <div class="tocart">
+                        <input type="hidden" name="product[name]" value="Rolex Submariner">
+                        <input type="hidden" name="product[price]" value="9500">
                         <button class="button-blue">
                             <img src="/src/img/tocart.png" alt="kosarba">
                         </button>
                     </div>
+                    </form>
                 </div>
 
                 <div class="product-card">
+                    <form action="../src/actions/AddToCart.php" method="post">
                     <img src="../src/img/products/02.jpg" alt="termek">
                     <p class="name">Omega Speedmaster</p>
                     <p class="price">8500 USD$</p>
                     <div class="tocart">
+                        <input type="hidden" name="product[name]" value="Omega Speedmaster">
+                        <input type="hidden" name="product[price]" value="8500">
                         <button class="button-blue">
                             <img src="/src/img/tocart.png" alt="kosarba">
                         </button>
                     </div>
+                    </form>
                 </div>
 
                 <div class="product-card">
+                    <form action="../src/actions/AddToCart.php" method="post">
                     <img src="../src/img/products/03.jpg" alt="termek">
                     <p class="name">TAG Heuer Carrera</p>
                     <p class="price">7500 USD$</p>
                     <div class="tocart">
+                        <input type="hidden" name="product[name]" value="TAG Heuer Carrera">
+                        <input type="hidden" name="product[price]" value="7500">
                         <button class="button-blue">
                             <img src="/src/img/tocart.png" alt="kosarba">
                         </button>
                     </div>
+                    </form>
                 </div>
 
                 <div class="product-card">
+                    <form action="../src/actions/AddToCart.php" method="post">
                     <img src="../src/img/products/04.jpg" alt="termek">
                     <p class="name">Audemars Piguet Royal Oak</p>
                     <p class="price">11500 USD$</p>
                     <div class="tocart">
+                        <input type="hidden" name="product[name]" value="Audemars Piguet Royal Oak">
+                        <input type="hidden" name="product[price]" value="11500">
                         <button class="button-blue">
                             <img src="/src/img/tocart.png" alt="kosarba">
                         </button>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>

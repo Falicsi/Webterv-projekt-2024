@@ -4,7 +4,12 @@ session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['product'])) {
       addToCart($_POST['product']);
-      header('Location: ../../pages/products.php');
+      if (isset($_SERVER['HTTP_REFERER'])) {
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+      }
+      else {
+        header('Location: ../../pages/products.php');
+      }
       exit;
     }
   }
