@@ -10,7 +10,12 @@
     <link rel="icon" type="image/png" href="../src/img/logo.png">
 </head>
 <body>
-    <?php include 'elements/navbar.php'; ?>
+    <?php
+    session_start(); 
+    if(isset($_POST['clear_cart'])) {
+        unset($_SESSION['cart']);
+    }
+    include 'elements/navbar.php'; ?>
     <div class="container">
         <div class="cart">
             <h1>Kosár</h1>
@@ -25,30 +30,46 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>Rolex Submariner</td>
-                        <td>1</td>
-                        <td>9500</td>
-                        <td>9500 USD</td>
-                    </tr>
-                    <tr>
-                        <td>Omega Speedmaster</td>
-                        <td>1</td>
-                        <td>9500</td>
-                        <td>8500 USD</td>
-                    </tr>
-                    </tbody>
+                    <?php
+                    if(isset($_SESSION['cart'])) {
+                        foreach ($_SESSION['cart'] as $product) {
+                            if(is_array($product)) {
+                                $subtotal = $product['price'] * $product['quantity'];
+                                echo "<tr>";
+                                echo "<td>" . $product['name'] . "</td>";
+                                echo "<td>" . $product['quantity'] . "</td>";
+                                echo "<td>" . $product['price'] . "</td>";
+                                echo "<td>" . $subtotal . " USD</td>";
+                                echo "</tr>";
+                            }
+                            
+                        }
+                    }
+                    ?>
                 </table>
                 <table class="sum">
-                    <tr>
-                        <td>Összesen:</td>
-                        <td>19000 USD</td>
-                    </tr>
+                    <?php
+                    if(isset($_SESSION['cart'])) {
+                        $total = 0;
+                        foreach ($_SESSION['cart'] as $product) {
+                            if(is_array($product)) {
+                                $total += $product['price'] * $product['quantity'];
+                            }
+                        }
+                        echo "<tr>";
+                        echo "<td>Összesen:</td>";
+                        echo "<td>" . $total . " USD</td>";
+                        echo "</tr>";
+                    }
+                    ?>
                 </table>
             </div>
             <div class="navbuttons">
                 <a href="products.php" class="button-blue">Vissza a termékekhez</a>
-                <a href="#" class="button-blue">Megrendelés</a>
+                <a href="#" class="button-blue">Megrendelés leadása</a>
+                <form method="post">
+                    <button type="submit" name="clear_cart" class="button-blue">Kosár kiürítése</button>
+                </form>
             </div>
         </div>
     </div>
