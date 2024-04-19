@@ -1,3 +1,22 @@
+<?php
+include_once '../src/actions/UserControl.php';
+include_once '../src/actions/DataControl.php';
+if(session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+}
+$userControl = new UserControl('../data/db.json');
+$dataControl = new DataControl();
+if(isset($_POST["user_id"])) {
+    $id = $_POST["user_id"];
+    echo "Processing removal of user with ID: $id\n"; // Debugging output
+    $userControl->remove_user($id);
+    $users = $userControl->get_users();
+    $dataControl->save_users("../data/db.json", $users);
+    echo "Final users list: " . json_encode($users); // Debugging output
+} else {
+    echo "No user ID provided in POST request.";
+}
+?>
 <!doctype html>
 <html lang="hu">
 <head>
@@ -10,7 +29,8 @@
     <link rel="icon" type="image/png" href="../src/img/logo.png">
 </head>
 <body>
-    <?php include 'elements/navbar.php'; ?>
+    <?php
+    include 'elements/navbar.php'; ?>
     <div class="admin-interface">
         <div class="user-management">
             <h2>Felhasználók kezelése</h2>
@@ -21,9 +41,9 @@
                 <input type="password" id="password" class="card" name="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" required>
                 <button class="button-blue" type="submit">Felhasználó hozzáadása</button>
             </form>
-            <form action="remove_user.php" method="POST">
+            <form action="admin.php" method="POST">
                 <label for="user_id">Felhasználó ID:</label>
-                <input type="number" id="user_id" class="card" name="user_id" placeholder="#1" required>
+                <input type="text" id="user_id" class="card" name="user_id" placeholder="#1" required>
                 <button class="button-blue" type="submit">Felhasználó eltávolítása</button>
             </form>
         </div>

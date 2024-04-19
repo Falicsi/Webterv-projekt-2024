@@ -1,6 +1,8 @@
 <?php
     include_once "DataControl.php";
-    session_start();
+    if (session_id() == '') {
+        session_start();
+    }
 
     $data = new DataControl();
     $fiokok = $data->load_users("../../data/db.json");
@@ -41,8 +43,7 @@
                 "password" => $jelszo,
                 "email" => $email
             ];
-            //$fiokok["users"][] = $newUser;
-            $data->save_users("../../data/db.json", $newUser);
+            $data->add_user("../../data/db.json", $newUser);
             $success = TRUE;
         } else {
             foreach ($hibak as $hiba) {

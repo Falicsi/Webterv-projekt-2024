@@ -1,46 +1,9 @@
 {
-    "users": [
-        {
-            "id": "660b0371264b0",
-            "username": "admin",
-            "password": "$2y$10$jOKJ5imRb4WsmXoSDeZEpOTGfTNluCG3N1zFiYmXMKC8METgFGWri",
-            "email": "admin@admin.hu"
-        },
-        {
-            "id": "662226525ee96",
-            "username": "teszt",
-            "password": "$2y$10$Cs40gBHdiCVuivV0acTwlOS\/nNz1mcAMi1cu.JNJPANXpJjALic7u",
-            "email": "teszt@gmail.com"
-        },
-        {
-            "id": "66224c0bcc436",
-            "username": null,
-            "password": null,
-            "email": null
-        },
-        {
-            "id": "66224d8aeb264",
-            "username": null,
-            "password": null,
-            "email": null
-        },
-        {
-            "id": "66224e2928943",
-            "username": null,
-            "password": null,
-            "email": null
-        },
-        {
-            "id": "66224f2bb9dec",
-            "username": null,
-            "password": null,
-            "email": null
-        },
-        {
-            "id": "66225010ac08e",
-            "username": "teszt5",
-            "password": "$2y$10$3nBnXPvyieUVljp0YEpJAejurA32kW.1\/BtlLtAvXIthRGV7LkUSS",
-            "email": "teszt5@teszt5.teszt5"
-        }
-    ]
+    "users": [],
+    "0": {
+        "id": "66228211b1135",
+        "username": "teszt1",
+        "password": "$2y$10$.mqVVQVmDrPpV2HGf21r6OPwYSJXU7A05xt7DWgASOsCsa.kIyhnO",
+        "email": "teszt1@teszt1.teszt1"
+    }
 }
