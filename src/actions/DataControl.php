@@ -3,9 +3,15 @@ session_start();
 unset($_SESSION['hibak']);
 class DataControl
 {
-    function save_users(string $path, array $data) {
+    function save_users(string $path, array $newUser) {
         $users = $this->load_users($path);
-        $users["users"][] = $data;
+        // $newUser = [
+        //     "id" => uniqid(), // Generate a unique ID
+        //     "username" => $data['username'],
+        //     "password" => $data['password'],
+        //     "email" => $data['email']
+        //];
+        $users["users"][] = $newUser;
         $json_data = json_encode($users, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
         file_put_contents($path, $json_data);
     }

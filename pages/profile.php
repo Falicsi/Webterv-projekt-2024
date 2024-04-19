@@ -13,13 +13,20 @@
     <link rel="icon" type="image/png" href="../src/img/logo.png">
 </head>
 <body>
-    <?php include 'elements/navbar.php'; ?>
+    <?php
+    $json = file_get_contents('../data/db.json');
+    $data = json_decode($json, true);
+    $username = $data['username'];
+    $email = $data['email']; 
+    include 'elements/navbar.php'; ?>
     <div class="profile content">
         <div class="profile-container card">
             <h2>Profil adatok</h2>
             <img src="/src/img/profilepic.png" alt="profilkep">
-            <p class="name">John Doe</p>
-            <p class="email">johndoe@gmail.com</p>
+            <p class="name"><?php echo $username; ?></p>
+            <p class="email"><?php echo $email; ?></p>
+            <!-- <p class="name">John Doe</p>
+            <p class="email">johndoe@gmail.com</p> -->
             <div class="functions">
                 <a href="#" class="link">Szerkesztés</a>
             </div>
@@ -121,6 +128,8 @@
                 </table>
         </div>
     </div>
-    <?php include 'elements/footer.php'; ?>
+    <?php
+        
+     include 'elements/footer.php'; ?>
 </body>
 </html>

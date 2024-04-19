@@ -35,13 +35,14 @@
 
         if (count($hibak) === 0) {
             $jelszo = password_hash($jelszo, PASSWORD_DEFAULT);
-            $fiok[] = [
+            $newUser = [
                 "id" => uniqid(),
                 "username" => $felhasznalonev,
                 "password" => $jelszo,
                 "email" => $email
             ];
-            $data->save_users("../../data/db.json", $fiok);
+            //$fiokok["users"][] = $newUser;
+            $data->save_users("../../data/db.json", $newUser);
             $success = TRUE;
         } else {
             foreach ($hibak as $hiba) {
