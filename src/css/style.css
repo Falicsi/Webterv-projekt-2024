@@ -726,7 +726,10 @@ footer p {
 
 .admin-interface input[type="text"],
 input[type="password"],
-input[type="number"] {
+input[type="number"],
+input[type="email"],
+input[type="file"]
+{
   width: 100%;
   padding: 20px;
   margin: 6px 0 10px 0;
@@ -752,4 +755,31 @@ input[type="number"]:focus-visible {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.admin-interface input[type="file"] {
+  text-align-last: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.admin-interface input[type="file"]::-webkit-file-upload-button {
+  display: block;
+  padding: 10px;
+  margin: 0 auto 15px auto;
+  box-sizing: border-box;
+  background-color: cornflowerblue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 40px;
+  font-weight: 600;
+  transition: 0.2s ease !important;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 16px;
+}
+
+input[type="file"]:hover::-webkit-file-upload-button,
+input[type="file"]:focus::-webkit-file-upload-button {
+  background-color: royalblue;
 }
