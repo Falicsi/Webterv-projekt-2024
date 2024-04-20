@@ -1,16 +1,16 @@
 {
     "users": [
         {
-            "id": "6623c664b47a6",
-            "username": "asd3",
-            "password": "$2y$10$xfY3Itt2rXQmtGGwCsMnh.8pt1LfCHWOrjhMBiMSS97xyFZ9vmM56",
-            "email": "asd3@asd.com"
+            "id": 1,
+            "username": "asd",
+            "password": "$2y$10$zuDcWSiOGqCeZmvlx.E\/P.bz\/eauDU3SRO1qJJG9OU2Gx1t8t0yzO",
+            "email": "asd@asd.com"
         },
         {
-            "id": "6623c6a04a463",
-            "username": "asd4",
-            "password": "$2y$10$eark3n.JosLYqRjUxLabteFr1L31TtS3exxw8H9yOFtWZIV4XHHFG",
-            "email": "asd4@asd.com"
+            "id": 2,
+            "username": "asd1",
+            "password": "$2y$10$Jp59AWeFks798bMePwCrC.pmuuZfczbW9.am9h4DSpZHt7gdkuatS",
+            "email": "asd1@asd.com"
         }
     ]
 }

@@ -9,6 +9,17 @@
     $hibak = [];
     $success = FALSE;
 
+    function addIdToUser() {
+        global $fiokok;
+        $maxId = 0;
+        foreach ($fiokok['users'] as $user) {
+            if ($user['id'] > $maxId) {
+                $maxId = $user['id'];
+            }
+        }
+        return ($maxId + 1);
+    }
+
     if (isset($_POST["signup"])) {
         if (!isset($_POST["username"]) || trim($_POST["username"]) === "")
             $hibak[] = "A felhasználónév megadása kötelező!";
@@ -37,8 +48,9 @@
 
         if (count($hibak) === 0) {
             $jelszo = password_hash($jelszo, PASSWORD_DEFAULT);
+
             $newUser = [
-                "id" => uniqid(),
+                "id" => addIdToUser(),
                 "username" => $felhasznalonev,
                 "password" => $jelszo,
                 "email" => $email
