@@ -1,3 +1,9 @@
+<?php
+require_once 'src/actions/DataControl.php';
+
+$dataControl = new DataControl();
+$data = $dataControl->load_products("data/db.json");
+?>
 <!doctype html>
 <html lang="hu">
 <head>
@@ -10,9 +16,7 @@
     <link rel="icon" type="image/png" href="./src/img/logo.png">
 </head>
 <body>
-    <?php
-    session_start();
-     include_once "pages/elements/navbar.php" ?>
+    <?php include_once "pages/elements/navbar.php" ?>
     <div class="content">
         <div class="homepage">
             <h1>Üdvözöljük webshopunkban!</h1>
@@ -30,65 +34,28 @@
         <div class="top-products">
             <h2>Tekintse meg kiemelt termékeinket</h2>
             <div class="products-container">
-                <div class="product-card">
-                    <form action="../src/actions/AddToCart.php" method="post">
-                    <img src="../src/img/products/01.jpg" alt="termek">
-                    <p class="name">Rolex Submariner</p>
-                    <p class="price">9500 USD$</p>
-                    <div class="tocart">
-                        <input type="hidden" name="product[name]" value="Rolex Submariner">
-                        <input type="hidden" name="product[price]" value="9500">
-                        <button class="button-blue">
-                            <img src="/src/img/tocart.png" alt="kosarba">
-                        </button>
-                    </div>
-                    </form>
-                </div>
 
-                <div class="product-card">
-                    <form action="../src/actions/AddToCart.php" method="post">
-                    <img src="../src/img/products/02.jpg" alt="termek">
-                    <p class="name">Omega Speedmaster</p>
-                    <p class="price">8500 USD$</p>
-                    <div class="tocart">
-                        <input type="hidden" name="product[name]" value="Omega Speedmaster">
-                        <input type="hidden" name="product[price]" value="8500">
-                        <button class="button-blue">
-                            <img src="/src/img/tocart.png" alt="kosarba">
-                        </button>
-                    </div>
-                    </form>
-                </div>
+                <?php
+                    for ($i = 0; $i < min(4, count($data['products'])); $i++) {
+                        $product = $data['products'][$i];
+                        echo '<div class="product-card">';
+                        echo '<form action="../src/actions/AddToCart.php" method="post">';
+                        echo '<img src="../src/img/products/' . $product['image'] . '" alt="termek">';
+                        echo '<p class="name">' . $product['name'] . '</p>';
+                        echo '<p class="price">' . $product['price'] . ' USD$</p>';
+                        echo '<div class="tocart">';
+                        echo '<input type="hidden" name="product[name]" value="' . $product['name'] . '">';
+                        echo '<input type="hidden" name="product[price]" value="' . $product['price'] . '">';
+                        echo '<button class="button-blue">';
+                        echo '<img src="/src/img/tocart.png" alt="kosarba">';
+                        echo '</button>';
+                        echo '</div>';
+                        echo '</form>';
+                        echo '</div>';
+                    }
+                ?>
 
-                <div class="product-card">
-                    <form action="../src/actions/AddToCart.php" method="post">
-                    <img src="../src/img/products/03.jpg" alt="termek">
-                    <p class="name">TAG Heuer Carrera</p>
-                    <p class="price">7500 USD$</p>
-                    <div class="tocart">
-                        <input type="hidden" name="product[name]" value="TAG Heuer Carrera">
-                        <input type="hidden" name="product[price]" value="7500">
-                        <button class="button-blue">
-                            <img src="/src/img/tocart.png" alt="kosarba">
-                        </button>
-                    </div>
-                    </form>
-                </div>
 
-                <div class="product-card">
-                    <form action="../src/actions/AddToCart.php" method="post">
-                    <img src="../src/img/products/04.jpg" alt="termek">
-                    <p class="name">Audemars Piguet Royal Oak</p>
-                    <p class="price">11500 USD$</p>
-                    <div class="tocart">
-                        <input type="hidden" name="product[name]" value="Audemars Piguet Royal Oak">
-                        <input type="hidden" name="product[price]" value="11500">
-                        <button class="button-blue">
-                            <img src="/src/img/tocart.png" alt="kosarba">
-                        </button>
-                    </div>
-                    </form>
-                </div>
             </div>
         </div>
         <div class="homepage">

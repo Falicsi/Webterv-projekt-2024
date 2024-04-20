@@ -21,7 +21,7 @@
         <li>
             <div class="icon-menu">
                 <ul>
-                    <li id="icon2"><a <?php if ($_SERVER['PHP_SELF'] == "/pages/profile.php") echo 'class="active"' ?> href="/pages/profile.php">
+                    <li <?php if(!$user_online) {echo 'class="user_active_h"';} ?>  id="icon2"><a <?php if ($_SERVER['PHP_SELF'] == "/pages/profile.php") echo 'class="active"' ?> href="/pages/profile.php">
                             <img class="nav-icon" src="/src/img/user.png" alt="profil">
                         </a></li>
                     <li id="icon1"><a <?php if ($_SERVER['PHP_SELF'] == "/pages/cart.php") echo 'class="active"' ?> href="/pages/cart.php">

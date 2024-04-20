@@ -50,5 +50,3 @@ class DataControl
     }
 
 }
-
-session_unset();

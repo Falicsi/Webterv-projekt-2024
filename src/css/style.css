@@ -167,7 +167,7 @@ body {
   padding: 0;
 }
 
-#navigacio #user_active_h {
+#navigacio #user_active_h, #navigacio .user_active_h  {
   display: none;
 }
 
