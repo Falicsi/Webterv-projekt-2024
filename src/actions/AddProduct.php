@@ -109,5 +109,3 @@ if (isset($_POST["add_item"])) {
 }
 header("Location: ../../index.php");
 exit;
-
-

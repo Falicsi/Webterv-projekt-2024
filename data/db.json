@@ -2,15 +2,71 @@
     "users": [
         {
             "id": 1,
-            "username": "asd",
-            "password": "$2y$10$zuDcWSiOGqCeZmvlx.E\/P.bz\/eauDU3SRO1qJJG9OU2Gx1t8t0yzO",
-            "email": "asd@asd.com"
-        },
-        {
-            "id": 2,
-            "username": "asd1",
-            "password": "$2y$10$Jp59AWeFks798bMePwCrC.pmuuZfczbW9.am9h4DSpZHt7gdkuatS",
-            "email": "asd1@asd.com"
+            "username": "admin",
+            "password": "$2y$10$ZNi3GGy4GtyuO7\/1yPDNs.FofX9fUCThTfQuir0bGDJDdz0Spl90O",
+            "email": "admin@admin.hu"
         }
+    ],
+    "products": [
+            {
+                "id": 1,
+                "image": "01.jpg",
+                "name": "Rolex Submariner",
+                "price": "9500"
+            },
+            {
+                "id": 2,
+                "image": "02.jpg",
+                "name": "Omega Speedmaster",
+                "price": "8500"
+            },
+            {
+                "id": 3,
+                "image": "03.jpg",
+                "name": "TAG Heuer Carrera",
+                "price": "7500"
+            },
+            {
+                "id": 4,
+                "image": "04.jpg",
+                "name": "Audemars Piguet Royal Oak",
+                "price": "11500"
+            },
+            {
+                "id": 5,
+                "image": "05.jpg",
+                "name": "Patek Philippe Nautilus",
+                "price": "10500"
+            },
+            {
+                "id": 6,
+                "image": "06.jpg",
+                "name": "Hublot Big Bang",
+                "price": "12500"
+            },
+            {
+                "id": 7,
+                "image": "07.jpg",
+                "name": "Jaeger-LeCoultre Reverso",
+                "price": "9500"
+            },
+            {
+                "id": 8,
+                "image": "08.jpg",
+                "name": "Cartier Tank",
+                "price": "8500"
+            },
+            {
+                "id": 9,
+                "image": "09.jpg",
+                "name": "Breguet Classique",
+                "price": "13500"
+            },
+            {
+                "id": 10,
+                "image": "10.jpg",
+                "name": "Vacheron Constantin Patrimony",
+                "price": "14500"
+            }
     ]
 }
