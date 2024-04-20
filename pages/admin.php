@@ -34,12 +34,14 @@ if(isset($_POST["user_id"])) {
     <div class="admin-interface">
         <div class="user-management">
             <h2>Felhasználók kezelése</h2>
-            <form action="add_user.php" method="POST">
+            <form action="../src/actions/AddUser.php" method="POST">
                 <label for="username">Felhasználónév:</label>
                 <input type="text" id="username" class="card" name="username" placeholder="John Doe" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="card" name="email" placeholder="johndoe@gmail.com" required>
                 <label for="password">Jelszó:</label>
                 <input type="password" id="password" class="card" name="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" required>
-                <button class="button-blue" type="submit">Felhasználó hozzáadása</button>
+                <button class="button-blue" type="submit" name="add_user">Felhasználó hozzáadása</button>
             </form>
             <form action="admin.php" method="POST">
                 <label for="user_id">Felhasználó ID:</label>
