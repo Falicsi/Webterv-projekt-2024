@@ -49,12 +49,14 @@ if(isset($_POST["user_id"])) {
         </div>
         <div class="product-management">
             <h2>Termékek kezelése</h2>
-            <form action="add_item.php" method="POST">
+            <form action="../src/actions/AddProduct.php" method="POST" enctype="multipart/form-data">
+                <label for="item_image">Termék kép:</label>
+                <input type="file" name="item_image" accept="image/*" required>
                 <label for="item_name">Termék neve:</label>
                 <input type="text" id="item_name" class="card" name="item_name" placeholder="Rolex Submariner" required>
                 <label for="item_price">Termék ára:</label>
                 <input type="number" id="item_price" class="card" name="item_price" placeholder="6000" required>
-                <button class="button-blue" type="submit">Termék hozzáadása</button>
+                <button class="button-blue" type="submit" name="add_item">Termék hozzáadása</button>
             </form>
             <form action="remove_item.php" method="POST">
                 <label for="item_id">Termék ID:</label>
