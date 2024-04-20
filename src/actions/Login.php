@@ -9,12 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $dataControl = new DataControl();
     $json = $dataControl->load_users('../../data/db.json');
-    foreach ($json["users"] as $users) {
-        foreach ($users as $user) {
-            if ($user["username"] === $username && password_verify($password, $user["password"])) {
-                $_SESSION["user"] = $user;
-                header("Location: ../../pages/profile.php");
-            }
+    foreach ($json["users"] as $user) {
+        if ($user["username"] === $username && password_verify($password, $user["password"])) {
+            $_SESSION["user"] = $user;
+            header("Location: ../../pages/profile.php");
         }
     }
     echo "Sikertelen bejelentkezés. Hibás felhasználónév vagy jelszó.";

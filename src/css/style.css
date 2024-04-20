@@ -167,6 +167,14 @@ body {
   padding: 0;
 }
 
+#navigacio #user_active_h {
+  display: none;
+}
+
+#navigacio #user_active_l {
+  display: none;
+}
+
 /* Login oldal */
 .login.content {
   display: grid;

@@ -5,7 +5,7 @@ class DataControl
 {
     function add_user(string $path, array $newUser) {
         $users = $this->load_users($path);
-        $users[] = $newUser;
+        $users['users'][] = $newUser;
         $this->save_users($path, $users);
     }
 

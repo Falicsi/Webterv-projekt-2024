@@ -14,10 +14,8 @@
 </head>
 <body>
     <?php
-    if (isset($_SERVER["username"])) {
-        $username = $_SESSION["user"]["username"];
-        $email = $_SESSION["user"]["email"];
-    }
+    $username = $_SESSION['user']['username'] ?? '';
+    $email = $_SESSION['user']['email'] ?? '';
     include 'elements/navbar.php'; ?>
     <div class="profile content">
         <div class="profile-container card">
@@ -25,8 +23,6 @@
             <img src="/src/img/profilepic.png" alt="profilkep">
             <p class="name"><?php echo $username; ?></p>
             <p class="email"><?php echo $email; ?></p>
-            <!-- <p class="name">John Doe</p>
-            <p class="email">johndoe@gmail.com</p> -->
             <div class="functions">
                 <a href="#" class="link">Szerkesztés</a>
             </div>
@@ -128,8 +124,6 @@
                 </table>
         </div>
     </div>
-    <?php
-        
-     include 'elements/footer.php'; ?>
+    <?php include 'elements/footer.php'; ?>
 </body>
 </html>
