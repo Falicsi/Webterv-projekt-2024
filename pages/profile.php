@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    require_once '../src/actions/DataControl.php';
 ?>
 <!doctype html>
 <html lang="hu">
@@ -14,8 +14,11 @@
 </head>
 <body>
     <?php
+    $dataControl = new DataControl();
     $username = $_SESSION['user']['username'] ?? '';
     $email = $_SESSION['user']['email'] ?? '';
+    $userId = $_SESSION['user']['id'];
+    $orders = $dataControl->load_user_orders("../data/db.json", $userId);
     include 'elements/navbar.php'; ?>
     <script>
         function editProfile() {
@@ -54,102 +57,37 @@
                 </form>
             </div>
         </div>
+
         <div class="profile-orders-container card">
-                <h2>Korábbi rendelések</h2>
-                <table class="megrendelesek-table">
-                    <thead>
+            <h2>Korábbi rendelések</h2>
+            <table class="megrendelesek-table">
+                <thead>
+                <tr>
+                    <th>Dátum</th>
+                    <th>Ár</th>
+                    <th>Azonosító</th>
+                    <th>Tételek</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($orders as $order) : ?>
                     <tr>
-                        <th>Dátum</th>
-                        <th>Ár</th>
-                        <th>Azonosító</th>
-                        <th>Tételek</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>2024-03-17</td>
-                        <td>4500 USD</td>
-                        <td>#123456</td>
+                        <td><?= $order['date'] ?></td>
+                        <td><?= $order['total'] ?> USD</td>
+                        <td><?= $order['id'] ?></td>
                         <td class="tetelek">
                             <ul>
-                                <li>Omega Speedmaster</li>
-                                <li>TAG Heuer Carrera</li>
+                                <?php foreach ($order['products'] as $item) : ?>
+                                    <li><?= $item['name'] ?? '' ?></li>
+                                <?php endforeach; ?>
                             </ul>
                         </td>
                     </tr>
-                    <tr>
-                        <td>2024-03-12</td>
-                        <td>5500 USD</td>
-                        <td>#123456</td>
-                        <td class="tetelek">
-                            <ul>
-                                <li>Audemars Piguet Royal Oak</li>
-                                <li>Jaeger-LeCoultre Reverso</li>
-                                <li>Patek Philippe Nautilus</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2024-03-22</td>
-                        <td>1200 USD</td>
-                        <td>#123456</td>
-                        <td class="tetelek">
-                            <ul>
-                                <li>Hublot Big Bang</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2024-03-12</td>
-                        <td>5500 USD</td>
-                        <td>#123456</td>
-                        <td class="tetelek">
-                            <ul>
-                                <li>Audemars Piguet Royal Oak</li>
-                                <li>Jaeger-LeCoultre Reverso</li>
-                                <li>Patek Philippe Nautilus</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2024-03-12</td>
-                        <td>9800 USD</td>
-                        <td>#123456</td>
-                        <td class="tetelek">
-                            <ul>
-                                <li>Audemars Piguet Royal Oak</li>
-                                <li>Jaeger-LeCoultre Reverso</li>
-                                <li>Patek Philippe Nautilus</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2024-03-12</td>
-                        <td>15500 USD</td>
-                        <td>#123456</td>
-                        <td class="tetelek">
-                            <ul>
-                                <li>Audemars Piguet Royal Oak</li>
-                                <li>Jaeger-LeCoultre Reverso</li>
-                                <li>Vacheron Constantin Patrimony</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2024-03-12</td>
-                        <td>2100 USD</td>
-                        <td>#123456</td>
-                        <td class="tetelek">
-                            <ul>
-                                <li>Vacheron Constantin Patrimony</li>
-                                <li>Audemars Piguet Royal Oak</li>
-                                <li>TAG Heuer Carrera</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
         </div>
+
     </div>
     <?php include 'elements/footer.php'; ?>
 </body>

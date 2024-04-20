@@ -9,19 +9,8 @@ class DataControl
         $this->save_users($path, $users);
     }
 
-    function add_product(string $path, array $newProduct) {
-        $products = $this->load_products($path);
-        $products['products'][] = $newProduct;
-        $this->save_products($path, $products);
-    }
-
     function save_users(string $path, array $users) {
         $json_data = json_encode($users, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-        file_put_contents($path, $json_data);
-    }
-
-    function save_products(string $path, array $products) {
-        $json_data = json_encode($products, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
         file_put_contents($path, $json_data);
     }
 
@@ -33,18 +22,6 @@ class DataControl
         $data = json_decode($json, true);
         if ($data === null) {
             return ['users' => []]; // Return an empty array structure if json_decode fails
-        }
-        return $data;
-    }
-
-    function load_products(string $path): array {
-        if (!file_exists($path) || filesize($path) == 0) {
-            return ['products' => []]; // Return an empty array structure if the file is missing or empty
-        }
-        $json = file_get_contents($path);
-        $data = json_decode($json, true);
-        if ($data === null) {
-            return ['products' => []]; // Return an empty array structure if json_decode fails
         }
         return $data;
     }
@@ -68,6 +45,65 @@ class DataControl
         } else {
             return false; // Ha nem találjuk meg a felhasználót, hamis értékkel térünk vissza
         }
+    }
+
+    function add_product(string $path, array $newProduct) {
+        $products = $this->load_products($path);
+        $products['products'][] = $newProduct;
+        $this->save_products($path, $products);
+    }
+
+    function save_products(string $path, array $products) {
+        $json_data = json_encode($products, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+        file_put_contents($path, $json_data);
+    }
+
+    function load_products(string $path): array {
+        if (!file_exists($path) || filesize($path) == 0) {
+            return ['products' => []]; // Return an empty array structure if the file is missing or empty
+        }
+        $json = file_get_contents($path);
+        $data = json_decode($json, true);
+        if ($data === null) {
+            return ['products' => []]; // Return an empty array structure if json_decode fails
+        }
+        return $data;
+    }
+
+    function add_order(string $path, array $newOrder) {
+        $orders = $this->load_orders($path);
+        $orders['orders'][] = $newOrder;
+        $this->save_orders($path, $orders);
+    }
+
+    function save_orders(string $path, array $orders) {
+        $json_data = json_encode($orders, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+        file_put_contents($path, $json_data);
+    }
+
+    function load_user_orders(string $path, int $userId): array {
+        $orders = $this->load_orders($path);
+        $userOrders = [];
+
+        foreach ($orders['orders'] as $order) {
+            if ($order['user_id'] == $userId) {
+                $userOrders[] = $order;
+            }
+        }
+
+        return $userOrders;
+    }
+
+    function load_orders(string $path): array {
+        if (!file_exists($path) || filesize($path) == 0) {
+            return ['orders' => []]; // Return an empty array structure if the file is missing or empty
+        }
+        $json = file_get_contents($path);
+        $data = json_decode($json, true);
+        if ($data === null) {
+            return ['orders' => []]; // Return an empty array structure if json_decode fails
+        }
+        return $data;
     }
 
 }

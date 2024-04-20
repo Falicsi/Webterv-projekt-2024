@@ -66,7 +66,9 @@
             </div>
             <div class="navbuttons">
                 <a href="products.php" class="button-blue">Vissza a termékekhez</a>
-                <a href="#" class="button-blue">Megrendelés leadása</a>
+                <form method="post" action="../src/actions/AddOrder.php">
+                    <button type="submit" name="submit_order" class="button-blue">Megrendelés leadása</button>
+                </form>
                 <form method="post">
                     <button type="submit" name="clear_cart" class="button-blue">Kosár kiürítése</button>
                 </form>
