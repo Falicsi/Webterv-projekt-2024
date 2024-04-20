@@ -72,10 +72,22 @@ if( isset($_POST["remove_user"]) ) {
         </div>
         <div class="product-management">
             <?php if (isset($_GET['success']) && $product) { echo '<div class="alert alert-success" role="alert">' . $success_message  . '</div>';} ?>
+            <script>
+                function previewImage(event) {
+                    var reader = new FileReader();
+                    reader.onload = function() {
+                        var output = document.getElementById('imagePreview');
+                        output.src = reader.result;
+                        output.style.display = 'block'; // Az előnézet megjelenítése
+                    }
+                    reader.readAsDataURL(event.target.files[0]);
+                }
+            </script>
             <h2>Termékek kezelése</h2>
             <form action="../src/actions/AddProduct.php" method="POST" enctype="multipart/form-data">
                 <label for="item_image">Termék kép:</label>
-                <input type="file" id="item_image" name="item_image" accept="image/*" required>
+                <img id="imagePreview" src="#" alt="Előnézet" style="max-width: 200px; max-height: 200px;">
+                <input type="file" id="item_image" name="item_image" accept="image/*" onchange="previewImage(event)" required>
                 <label for="item_name">Termék neve:</label>
                 <input type="text" id="item_name" class="card" name="item_name" placeholder="Rolex Submariner" required>
                 <label for="item_price">Termék ára:</label>

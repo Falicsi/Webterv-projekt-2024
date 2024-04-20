@@ -17,6 +17,23 @@
     $username = $_SESSION['user']['username'] ?? '';
     $email = $_SESSION['user']['email'] ?? '';
     include 'elements/navbar.php'; ?>
+    <script>
+        function editProfile() {
+            document.getElementById('editForm').style.display = 'block';
+        }
+
+        function cancelEdit() {
+            // Visszaállítjuk az eredeti profiladatokat és elrejtjük a szerkesztési űrlapot
+            var originalUsername = '<?php echo $username; ?>';
+            var originalEmail = '<?php echo $email; ?>';
+            document.getElementById('newUsername').value = originalUsername;
+            document.getElementById('newEmail').value = originalEmail;
+            document.getElementById('profileForm').reset(); // Űrlap visszaállítása
+            document.getElementById('editForm').style.display = 'none';
+        }
+
+    </script>
+
     <div class="profile content">
         <div class="profile-container card">
             <h2>Profil adatok</h2>
@@ -24,7 +41,17 @@
             <p class="name"><?php echo $username; ?></p>
             <p class="email"><?php echo $email; ?></p>
             <div class="functions">
-                <a href="#" class="link">Szerkesztés</a>
+                <a href="#" class="link" onclick="editProfile()">Szerkesztés</a>
+            </div>
+            <div id="editForm" style="display: none;">
+                <form id="profileForm" action="../src/actions/UpdateUser.php" method="POST">
+                    <label for="newUsername">Felhasználónév:</label>
+                    <input type="text" id="newUsername" name="newUsername" <?php echo 'value="' . $username . '"' ?> >
+                    <label for="newEmail">Email:</label>
+                    <input type="email" id="newEmail" name="newEmail" <?php echo 'value="' . $email . '"' ?> >
+                    <button type="submit" name="saveChanges">Mentés</button>
+                    <button type="button" onclick="cancelEdit()">Mégse</button>
+                </form>
             </div>
         </div>
         <div class="profile-orders-container card">

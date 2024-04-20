@@ -49,4 +49,25 @@ class DataControl
         return $data;
     }
 
+    function update_user(string $path, int $userId, array $userData) {
+        $users = $this->load_users($path);
+        $index = array_search($userId, array_column($users['users'], 'id')); // Keresés a felhasználó tömbben
+
+        if ($index !== false) { // Ha megtaláljuk a felhasználót
+            // Ellenőrizzük, hogy az új felhasználónév vagy email már foglalt-e
+            foreach ($users['users'] as $key => $user) {
+                if ($user['id'] !== $userId && ($user['username'] === $userData['username'] || $user['email'] === $userData['email'])) {
+                    return false; // Ha már létezik ilyen felhasználónév vagy email, akkor sikertelen módosítás
+                }
+            }
+
+            // Módosítjuk a felhasználó adatait
+            $users['users'][$index] = array_merge($users['users'][$index], $userData);
+            $this->save_users($path, $users); // Mentjük az új adatokat a fájlba
+            return true; // Sikeres módosítás esetén igaz értékkel térünk vissza
+        } else {
+            return false; // Ha nem találjuk meg a felhasználót, hamis értékkel térünk vissza
+        }
+    }
+
 }

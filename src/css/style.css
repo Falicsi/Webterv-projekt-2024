@@ -353,6 +353,10 @@ body {
   margin-bottom: 0;
 }
 
+.profile-container #editForm input {
+  display: block;
+}
+
 .profile-orders-container {
   background: #fff;
   max-width: 800px;
@@ -725,10 +729,10 @@ footer p {
 }
 
 .admin-interface input[type="text"],
-input[type="password"],
-input[type="number"],
-input[type="email"],
-input[type="file"]
+.admin-interface input[type="password"],
+.admin-interface input[type="number"],
+.admin-interface input[type="email"],
+.admin-interface input[type="file"]
 {
   width: 100%;
   padding: 20px;
@@ -739,8 +743,8 @@ input[type="file"]
 }
 
 .admin-interface input[type="text"]:focus-visible,
-input[type="password"]:focus-visible,
-input[type="number"]:focus-visible {
+.admin-interface input[type="password"]:focus-visible,
+.admin-interface input[type="number"]:focus-visible {
   outline-width: 2px;
   outline-color: royalblue;
 }
@@ -782,4 +786,12 @@ input[type="number"]:focus-visible {
 input[type="file"]:hover::-webkit-file-upload-button,
 input[type="file"]:focus::-webkit-file-upload-button {
   background-color: royalblue;
+}
+
+#imagePreview {
+  display: none;
+  width: 200px;
+  height: 200px;
+  border: 4px solid royalblue;
+  border-radius: 96px;
 }
