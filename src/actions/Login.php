@@ -12,8 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     foreach ($json["users"] as $users) {
         foreach ($users as $user) {
             if ($user["username"] === $username && password_verify($password, $user["password"])) {
-                echo "Sikeres bejelentkezés!";
-                exit;
+                $_SESSION["user"] = $user;
+                header("Location: ../../pages/profile.php");
             }
         }
     }

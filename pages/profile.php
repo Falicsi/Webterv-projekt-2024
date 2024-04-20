@@ -14,10 +14,10 @@
 </head>
 <body>
     <?php
-    $json = file_get_contents('../data/db.json');
-    $data = json_decode($json, true);
-    $username = $data['username'];
-    $email = $data['email']; 
+    if (isset($_SERVER["username"])) {
+        $username = $_SESSION["user"]["username"];
+        $email = $_SESSION["user"]["email"];
+    }
     include 'elements/navbar.php'; ?>
     <div class="profile content">
         <div class="profile-container card">
