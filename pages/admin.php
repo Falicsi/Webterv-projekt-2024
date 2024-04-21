@@ -9,11 +9,11 @@ $dataControl = new DataControl();
 
 if( isset($_POST["remove_user"]) ) {
     $id = $_POST["user_id"];
-    echo "Processing removal of user with ID: $id\n"; // Debugging output
+    echo "Processing removal of user with ID: $id\n";
     $userControl->remove_user($id);
     $users = $userControl->get_users();
     $dataControl->save_users("../data/db.json", $users);
-    echo "Final users list: " . json_encode($users); // Debugging output
+    echo "Final users list: " . json_encode($users);
 }
 
 $adminbool = false;
@@ -104,7 +104,7 @@ if (!$adminbool) {
                     reader.onload = function() {
                         var output = document.getElementById('imagePreview');
                         output.src = reader.result;
-                        output.style.display = 'block'; // Az előnézet megjelenítése
+                        output.style.display = 'block';
                     }
                     reader.readAsDataURL(event.target.files[0]);
                 }

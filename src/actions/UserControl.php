@@ -6,7 +6,6 @@ class UserControl
     function __construct(string $path)
     {
         if (!file_exists($path) || filesize($path) == 0) {
-            // No file or empty file, initialize with empty users list
             $this->users = [];
         } else {
             $json = file_get_contents($path);

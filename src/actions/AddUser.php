@@ -20,7 +20,6 @@ if (isset($_POST["add_user"])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Ellenőrizzük, hogy a felhasználónév és az email cím egyedi-e
     $users = $dataControl->load_users("../../data/db.json");
     foreach ($users['users'] as $user) {
         if ($user['username'] === $username) {
@@ -35,10 +34,8 @@ if (isset($_POST["add_user"])) {
         }
     }
 
-    // Jelszó titkosítása
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    // Új felhasználó létrehozása
     $newUser = [
         "id" => addIdToUser(),
         "username" => $username,
@@ -46,11 +43,9 @@ if (isset($_POST["add_user"])) {
         "email" => $email
     ];
 
-    // Felhasználó hozzáadása a felhasználókhoz
     $dataControl->add_user("../../data/db.json", $newUser);
 
     $_SESSION['success'][] = "Sikeresen létrehoztad a felhasználót.";
-    // Visszairányítás az index oldalra vagy ahol szükséges
 } else {
     $_SESSION['hibak'][] = "Nem sikerült feldolgozni a kérésedet.";
 }

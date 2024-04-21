@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", function() {
     removeProductForm.appendChild(removeProductResultDiv);
 
     removeProductInput.addEventListener("keyup", function(event) {
-        const productId = parseInt(removeProductInput.value.trim()); // Az azonosítót számként kezeljük
-        if (isNaN(productId)) { // Ellenőrizzük, hogy a beviteli érték egy szám-e
-            removeProductResultDiv.textContent = ""; // Ha nem szám, töröljük a tartalmat
+        const productId = parseInt(removeProductInput.value.trim());
+        if (isNaN(productId)) {
+            removeProductResultDiv.textContent = "";
             return;
         }
 
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", "../src/actions/InspectProduct.php", true); // Az Inspect funkciót hívja
+        xhr.open("POST", "../src/actions/InspectProduct.php", true);
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
         xhr.onreadystatechange = function() {

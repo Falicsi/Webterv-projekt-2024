@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", function() {
     removeUserForm.appendChild(removeUserResultDiv);
 
     removeUserInput.addEventListener("keyup", function(event) {
-        const userId = parseInt(removeUserInput.value.trim()); // Az azonosítót számként kezeljük
-        if (isNaN(userId)) { // Ellenőrizzük, hogy a beviteli érték egy szám-e
-            removeUserResultDiv.textContent = ""; // Ha nem szám, töröljük a tartalmat
+        const userId = parseInt(removeUserInput.value.trim());
+        if (isNaN(userId)) {
+            removeUserResultDiv.textContent = "";
             return;
         }
 
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", "../src/actions/InspectUser.php", true); // Az InspectUser.php-t hívja
+        xhr.open("POST", "../src/actions/InspectUser.php", true);
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
         xhr.onreadystatechange = function() {

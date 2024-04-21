@@ -66,18 +66,11 @@ exit;
 function calculateOrderTotal($cart) {
     $total = 0;
 
-    // Ellenőrizze, hogy a kosár üres-e
     if (!empty($cart)) {
-        // Térjen vissza minden kosár elemmel és számolja össze az összes árat
         foreach ($cart as $productId => $quantity) {
-            // Az adott termék ára és mennyisége
             $productPrice = $_SESSION['cart'][$productId]['price'];
             $productQuantity = $_SESSION['cart'][$productId]['quantity'];
-
-            // Számítsa ki az adott termék összértékét
             $subtotal = $productPrice * $productQuantity;
-
-            // Összeadja az adott termék összértékét a teljes összeghez
             $total += $subtotal;
         }
     }

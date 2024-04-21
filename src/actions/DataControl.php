@@ -16,34 +16,31 @@ class DataControl
 
     function load_users(string $path): array {
         if (!file_exists($path) || filesize($path) == 0) {
-            return ['users' => []]; // Return an empty array structure if the file is missing or empty
+            return ['users' => []];
         }
         $json = file_get_contents($path);
         $data = json_decode($json, true);
         if ($data === null) {
-            return ['users' => []]; // Return an empty array structure if json_decode fails
+            return ['users' => []];
         }
         return $data;
     }
 
     function update_user(string $path, int $userId, array $userData) {
         $users = $this->load_users($path);
-        $index = array_search($userId, array_column($users['users'], 'id')); // Keresés a felhasználó tömbben
-
-        if ($index !== false) { // Ha megtaláljuk a felhasználót
-            // Ellenőrizzük, hogy az új felhasználónév vagy email már foglalt-e
+        $index = array_search($userId, array_column($users['users'], 'id'));
+        if ($index !== false) {
             foreach ($users['users'] as $key => $user) {
                 if ($user['id'] !== $userId && ($user['username'] === $userData['username'] || $user['email'] === $userData['email'])) {
-                    return false; // Ha már létezik ilyen felhasználónév vagy email, akkor sikertelen módosítás
+                    return false;
                 }
             }
 
-            // Módosítjuk a felhasználó adatait
             $users['users'][$index] = array_merge($users['users'][$index], $userData);
-            $this->save_users($path, $users); // Mentjük az új adatokat a fájlba
-            return true; // Sikeres módosítás esetén igaz értékkel térünk vissza
+            $this->save_users($path, $users);
+            return true;
         } else {
-            return false; // Ha nem találjuk meg a felhasználót, hamis értékkel térünk vissza
+            return false;
         }
     }
 
@@ -60,12 +57,12 @@ class DataControl
 
     function load_products(string $path): array {
         if (!file_exists($path) || filesize($path) == 0) {
-            return ['products' => []]; // Return an empty array structure if the file is missing or empty
+            return ['products' => []];
         }
         $json = file_get_contents($path);
         $data = json_decode($json, true);
         if ($data === null) {
-            return ['products' => []]; // Return an empty array structure if json_decode fails
+            return ['products' => []];
         }
         return $data;
     }
@@ -96,24 +93,24 @@ class DataControl
 
     function load_orders(string $path): array {
         if (!file_exists($path) || filesize($path) == 0) {
-            return ['orders' => []]; // Return an empty array structure if the file is missing or empty
+            return ['orders' => []];
         }
         $json = file_get_contents($path);
         $data = json_decode($json, true);
         if ($data === null) {
-            return ['orders' => []]; // Return an empty array structure if json_decode fails
+            return ['orders' => []];
         }
         return $data;
     }
 
     function load_admins(string $path): array {
         if (!file_exists($path) || filesize($path) == 0) {
-            return ['admins' => []]; // Return an empty array structure if the file is missing or empty
+            return ['admins' => []];
         }
         $json = file_get_contents($path);
         $data = json_decode($json, true);
         if ($data === null) {
-            return ['admins' => []]; // Return an empty array structure if json_decode fails
+            return ['admins' => []];
         }
         return $data;
     }

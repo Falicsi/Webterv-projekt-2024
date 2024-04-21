@@ -26,12 +26,11 @@
         }
 
         function cancelEdit() {
-            // Visszaállítjuk az eredeti profiladatokat és elrejtjük a szerkesztési űrlapot
             var originalUsername = '<?php echo $username; ?>';
             var originalEmail = '<?php echo $email; ?>';
             document.getElementById('newUsername').value = originalUsername;
             document.getElementById('newEmail').value = originalEmail;
-            document.getElementById('profileForm').reset(); // Űrlap visszaállítása
+            document.getElementById('profileForm').reset();
             document.getElementById('editForm').style.display = 'none';
         }
 
