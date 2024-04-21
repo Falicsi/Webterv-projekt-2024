@@ -50,11 +50,11 @@ if (!$adminbool) {
         $product = false;
         $user = false;
         switch ($_GET['success']) {
-            case "product_deleted":
+            case "product-deleted":
                 $product = true;
                 $success_message = "A termék sikeresen eltávolítva.";
                 break;
-            case "user_deleted":
+            case "user-deleted":
                 $user = true;
                 $success_message = "A felhasználó sikeresen eltávolítva.";
                 break;
@@ -62,11 +62,23 @@ if (!$adminbool) {
                 $success_message = "Sikeres törlés!";
                 break;
         }
+        echo "<span class='admin-message' style='color: red;text-align: center;'>$success_message</span>";
     }
+
+    if (isset($_GET['error'])) {
+        $errorMessage = $_GET['error'];
+        $errorMessage = match ($errorMessage) {
+            "product-invalid" => "Ilyen azonosítóval rendelkező termék nem létezik!",
+            "login-to-order" => "Kérem jelentkezzen be a rendelés leadásához!",
+            "user-invalid" => "Ilyen azonosítóval rendelkező felhasználó nem létezik!",
+            default => "Ismeretlen hiba történt!",
+        };
+        echo "<span class='admin-message' style='color: red;text-align: center;'>$errorMessage</span>";
+    }
+
     ?>
     <div class="admin-interface">
         <div class="user-management">
-            <?php if (isset($_GET['success']) && $user) { echo '<div class="alert alert-success" role="alert">' . $success_message  . '</div>';} ?>
             <h2>Felhasználók kezelése</h2>
             <form action="../src/actions/AddUser.php" method="POST">
                 <label for="username">Felhasználónév:</label>

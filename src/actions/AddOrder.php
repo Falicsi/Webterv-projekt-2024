@@ -2,7 +2,7 @@
 require_once 'DataControl.php';
 
 if (!isset($_SESSION['user'])) {
-    header("Location: ../../pages/login.php");
+    header("Location: ../../pages/login.php?error=login-to-order");
     exit;
 }
 

@@ -34,6 +34,7 @@
         if (isset($_GET['error'])) {
             $errorMessage = $_GET['error'];
             if ($errorMessage == "none-admin-user") {$errorMessage = "Kérem jelentkezzen be egy adminisztrációs jogosultságú felhasználóval!";}
+            if ($errorMessage == "login-to-order") {$errorMessage = "Kérem jelentkezzen be a rendelés leadásához!";}
             echo "<span style='color: red;text-align: center;'>$errorMessage</span>";
         }
         ?>

@@ -697,13 +697,18 @@ footer p {
 }
 
 /* admin felület */
+.admin-message {
+  text-align: center;
+  width: 100%;
+  display: block;
+}
 
 .admin-interface {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  min-height: calc(100vh - 160px);
+  min-height: calc(100vh - 180px);
 }
 
 .user-management,
