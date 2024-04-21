@@ -106,4 +106,16 @@ class DataControl
         return $data;
     }
 
+    function load_admins(string $path): array {
+        if (!file_exists($path) || filesize($path) == 0) {
+            return ['admins' => []]; // Return an empty array structure if the file is missing or empty
+        }
+        $json = file_get_contents($path);
+        $data = json_decode($json, true);
+        if ($data === null) {
+            return ['admins' => []]; // Return an empty array structure if json_decode fails
+        }
+        return $data;
+    }
+
 }

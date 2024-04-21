@@ -175,6 +175,10 @@ body {
   display: none;
 }
 
+#navigacio #admin_nonactive {
+  display: none;
+}
+
 /* Login oldal */
 .login.content {
   display: grid;

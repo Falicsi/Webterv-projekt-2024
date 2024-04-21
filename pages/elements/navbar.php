@@ -6,7 +6,8 @@
                 <ul>
                     <li><a <?php if ($_SERVER['PHP_SELF'] == "/index.php") echo 'class="active"' ?> href="/index.php">Kezdőlap</a></li>
                     <li><a <?php if ($_SERVER['PHP_SELF'] == "/pages/products.php") echo 'class="active"' ?> href="/pages/products.php">Termékek</a></li>
-                    <li><a <?php if ($_SERVER['PHP_SELF'] == "/pages/admin.php") echo 'class="active"' ?> href="/pages/admin.php">Admin</a></li>
+
+                    <li <?php if(!(isset($_SESSION['admin']) && $_SESSION['admin'])) {echo 'id="admin_nonactive"';} ?>><a <?php if ($_SERVER['PHP_SELF'] == "/pages/admin.php") echo 'class="active"' ?> href="/pages/admin.php">Admin</a></li>
 
                     <?php
                         $user_online = false;

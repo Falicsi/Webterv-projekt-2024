@@ -16,6 +16,19 @@ if( isset($_POST["remove_user"]) ) {
     echo "Final users list: " . json_encode($users); // Debugging output
 }
 
+$adminbool = false;
+$user = $_SESSION['user'] ?? null;
+$data = $dataControl->load_admins('../data/db.json');
+foreach( $data['admins'] as $admin ) {
+    if( $user['id'] === $admin['id'] ) {
+        $adminbool = true;
+    }
+}
+if (!$adminbool) {
+    header("Location: login.php?error=none-admin-user");
+    exit();
+}
+
 ?>
 
 <!doctype html>
