@@ -33,8 +33,12 @@
         <?php
         if (isset($_GET['error'])) {
             $errorMessage = $_GET['error'];
-            if ($errorMessage == "none-admin-user") {$errorMessage = "Kérem jelentkezzen be egy adminisztrációs jogosultságú felhasználóval!";}
-            if ($errorMessage == "login-to-order") {$errorMessage = "Kérem jelentkezzen be a rendelés leadásához!";}
+            $errorMessage = match($errorMessage) {
+                "none-admin-user" => "Kérem jelentkezzen be egy adminisztrációs jogosultságú felhasználóval!",
+                "login-to-order" => "Kérem jelentkezzen be a rendelés leadásához!",
+                "bad-credentials" => "Hibás felhasználói adatok!",
+                default => $errorMessage
+            };
             echo "<span style='color: red;text-align: center;'>$errorMessage</span>";
         }
 
