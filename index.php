@@ -62,28 +62,33 @@ $data = $dataControl->load_products("data/db.json");
             <p>Fedezze fel széles választékunkat stílusos és elegáns óráinkból.</p>
             <a href="pages/products.php" class="btn">Vásárlás</a>
         </div>
+
         <div class="home-login">
-            <h3>Ön rendelkezik már fiókkal?</h3>
-                <div class="login-container card">
-                    <form action="../src/actions/Login.php" method="POST" id="login-form">
-                        <h2>Bejelentkezés</h2>
-                        <div class="input-mezo">
-                            <label for="username">Felhasználónév</label>
-                            <input type="text" placeholder="John Doe" id="username" name="username" class="card" required>
-                        </div>
-                        <div class="input-mezo">
-                            <label for="password">Jelszó</label>
-                            <input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" id="password" name="password" class="card" required>
-                        </div>
-                        <div class="input-mezo extra">
-                            <a class="forgot-password link" href="#">Elfelejtett jelszó</a>
-                            <a class="register link" href="/pages/register.php">Regisztráció</a>
-                        </div>
-                        <input type="submit" value="Bejelentkezés" class="submit-button button-blue">
-                    </form>
-                </div>
-        </div>
+        <?php if (!isset($_SESSION['user'])): ?>
+
+                <h3>Ön rendelkezik már fiókkal?</h3>
+                    <div class="login-container card">
+                        <form action="../src/actions/Login.php" method="POST" id="login-form">
+                            <h2>Bejelentkezés</h2>
+                            <div class="input-mezo">
+                                <label for="username">Felhasználónév</label>
+                                <input type="text" placeholder="John Doe" id="username" name="username" class="card" required>
+                            </div>
+                            <div class="input-mezo">
+                                <label for="password">Jelszó</label>
+                                <input type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" id="password" name="password" class="card" required>
+                            </div>
+                            <div class="input-mezo extra">
+                                <a class="forgot-password link" href="#">Elfelejtett jelszó</a>
+                                <a class="register link" href="/pages/register.php">Regisztráció</a>
+                            </div>
+                            <input type="submit" value="Bejelentkezés" class="submit-button button-blue">
+                        </form>
+                    </div>
+            </div>
+    <?php endif; ?>
     </div>
+
     <footer class="card">
         <p>© 2024 Minden jog fenntartva.</p>
     </footer>

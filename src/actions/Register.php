@@ -65,7 +65,7 @@
     }
 
     if ($success) {
-        header("Location: ../../pages/login.php");
+        header("Location: ../../pages/login.php?success=login-newuser");
     } else {
         $_SESSION['hibak'] = $hibak;
         header("Location: ../../pages/register.php");

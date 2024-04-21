@@ -71,6 +71,7 @@ if (!$adminbool) {
             "product-invalid" => "Ilyen azonosítóval rendelkező termék nem létezik!",
             "login-to-order" => "Kérem jelentkezzen be a rendelés leadásához!",
             "user-invalid" => "Ilyen azonosítóval rendelkező felhasználó nem létezik!",
+            "add-product-fail" => "Hiba történt a termék hozzáadásakor (valószínűleg PNG képfájlt adott meg JPEG helyett)!",
             default => "Ismeretlen hiba történt!",
         };
         echo "<span class='admin-message' style='color: red;text-align: center;'>$errorMessage</span>";
@@ -111,6 +112,7 @@ if (!$adminbool) {
             <h2>Termékek kezelése</h2>
             <form action="../src/actions/AddProduct.php" method="POST" enctype="multipart/form-data">
                 <label for="item_image">Termék kép:</label>
+                <p style="margin: 0;font-size: 15px;">JPG formátum, max 500kb</p>
                 <img id="imagePreview" src="#" alt="Előnézet" style="max-width: 200px; max-height: 200px;">
                 <input type="file" id="item_image" name="item_image" accept="image/*" onchange="previewImage(event)" required>
                 <label for="item_name">Termék neve:</label>

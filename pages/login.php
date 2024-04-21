@@ -37,6 +37,12 @@
             if ($errorMessage == "login-to-order") {$errorMessage = "Kérem jelentkezzen be a rendelés leadásához!";}
             echo "<span style='color: red;text-align: center;'>$errorMessage</span>";
         }
+
+        if (isset($_GET['success'])) {
+            $successMessage = $_GET['success'];
+            if ($successMessage == "login-newuser") {$successMessage = "Sikeres regisztráció, jelentkezzen be!";}
+            echo "<span style='color: green;text-align: center;'>$successMessage</span>";
+        }
         ?>
     </div>
     <?php include 'elements/footer.php'; ?>

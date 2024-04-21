@@ -21,7 +21,6 @@ if (isset($_POST["add_item"])) {
     $target_file = $target_dir . basename($_FILES["item_image"]["name"]);
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-    // Ellenőrizzük, hogy a fájl valóban kép-e
     $check = getimagesize($_FILES["item_image"]["tmp_name"]);
     if ($check === false) {
         $_SESSION['hibak'][] = "A feltöltött fájl nem egy kép.";
@@ -29,7 +28,6 @@ if (isset($_POST["add_item"])) {
         exit;
     }
 
-    // Ellenőrizzük a kép méretét
     if ($_FILES["item_image"]["size"] > 500000) {
         $_SESSION['hibak'][] = "A kép mérete túl nagy. Maximum 500KB lehet.";
         header("Location: ../../index.php");
@@ -38,25 +36,20 @@ if (isset($_POST["add_item"])) {
 
     $id = addIdToProduct();
 
-    // Átnevezzük a fájlt egyedi névre
     $newFileName = $id . "." . $imageFileType;
     $target_file = $target_dir . $newFileName;
 
-    // Képfájl mentése
     if (!move_uploaded_file($_FILES["item_image"]["tmp_name"], $target_file)) {
         $_SESSION['hibak'][] = "Hiba történt a kép feltöltése közben.";
         header("Location: ../../index.php");
         exit;
     }
 
-    // Átméretezés 200x300 méretre
     $maxWidth = 200;
     $maxHeight = 300;
 
-    // Kép méretének lekérdezése
     list($width, $height) = getimagesize($target_file);
 
-    // Új méretek meghatározása a szélesség és magasság arányának megőrzése mellett
     $newWidth = $width;
     $newHeight = $height;
 
@@ -69,30 +62,23 @@ if (isset($_POST["add_item"])) {
             $maxHeight = $maxWidth / $ratio;
         }
 
-        // Új méretek beállítása
         $newWidth = $maxWidth;
         $newHeight = $maxHeight;
     }
 
-    // Kép létrehozása az új méretekkel
     $thumb = imagecreatetruecolor($newWidth, $newHeight);
     $image = imagecreatefromjpeg($target_file);
 
-    // Átméretezés
     imagecopyresampled($thumb, $image, 0, 0, 0, 0, $newWidth, $newHeight, $width, $height);
 
-    // Kép mentése
     imagejpeg($thumb, $target_file, 90);
 
-    // Memória felszabadítása
     imagedestroy($thumb);
     imagedestroy($image);
 
-    // Termék adatainak feldolgozása
     $itemName = $_POST['item_name'];
     $itemPrice = $_POST['item_price'];
 
-    // Új termék létrehozása
     $newProduct = [
         "id" => $id,
         "image" => $newFileName,
@@ -100,12 +86,10 @@ if (isset($_POST["add_item"])) {
         "price" => $itemPrice
     ];
 
-    // Termék hozzáadása a termékekhez
     $dataControl->add_product("../../data/db.json", $newProduct);
+    header("Location: ../../index.php");
 
-    // Visszairányítás az index oldalra vagy ahol szükséges
 } else {
-    $_SESSION['hibak'][] = "Nincs kép feltöltve.";
+    header("Location: ../../pages/admin.php?error=add-product-fail");
 }
-header("Location: ../../index.php");
 exit;
